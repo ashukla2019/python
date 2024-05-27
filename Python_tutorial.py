@@ -13,6 +13,22 @@ Python was mainly developed for emphasis on code readability, and its syntax all
 This would be a multiline comment in Python that...
 """
 #-----------------------------------------------------------------------------------------------------------------------------------------------
+                              #Printing output to console
+# print(hello) => NameError: name 'hello' is not defined
+# One object is passed 
+print("GeeksForGeeks") 
+   
+x = 5
+# Two objects are passed 
+print("x =", x) 
+   
+# code for disabling the soft space feature  
+#print('G', 'F', 'G', sep ='') 
+   
+# using end argument 
+#print("Python", end = '@')   
+#print("GeeksforGeeks")  Python@GeeksforGeeks
+#-----------------------------------------------------------------------------------------------------------------------------------------------
                                   #Variables:
 #We do not need to declare variables before using them or declare their type. A variable is created the moment we first assign a value to it.
 
@@ -140,22 +156,6 @@ print("N" not in b1)
    
 val = input("Enter your value: ") 
 print(val)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------
-                              #Printing output to console
-# One object is passed 
-print("GeeksForGeeks") 
-   
-x = 5
-# Two objects are passed 
-print("x =", x) 
-   
-# code for disabling the soft space feature  
-#print('G', 'F', 'G', sep ='') 
-   
-# using end argument 
-#print("Python", end = '@')   
-#print("GeeksforGeeks")  Python@GeeksforGeeks
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 								#Python Data Types
