@@ -23,11 +23,17 @@ age = 45
 salary = 1456.8            
    
 # A string   
-name = "John"             
+name = "John"
+name1 = 'ABC'
+
+#Bool
+True
+False
    
 print(age) 
 print(salary) 
 print(name) 
+print(name1)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
                                  # Operators:
