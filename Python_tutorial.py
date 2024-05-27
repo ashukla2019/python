@@ -31,6 +31,8 @@ print("x =", x)
 #-----------------------------------------------------------------------------------------------------------------------------------------------
                                   #Variables:
 #We do not need to declare variables before using them or declare their type. A variable is created the moment we first assign a value to it.
+-> No special character is allowed
+-> starting with number not allowed
 
 # An integer assignment 
 age = 45                     
@@ -50,6 +52,16 @@ print(age)
 print(salary) 
 print(name) 
 print(name1)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+						#Taking input from user
+#input(): This function first takes the input from the user and then evaluates the expression,
+# which means Python automatically identifies whether the user entered 
+#a string or a number or list. For example:
+# Python program showing a use of input() 
+   
+val = input("Enter your value: ") 
+print(val)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
                                  # Operators:
@@ -146,16 +158,6 @@ print(a1 is b1)
 # Membership operator
 print("G" in a1)
 print("N" not in b1)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------
-						#Taking input from user
-#input(): This function first takes the input from the user and then evaluates the expression,
-# which means Python automatically identifies whether the user entered 
-#a string or a number or list. For example:
-# Python program showing a use of input() 
-   
-val = input("Enter your value: ") 
-print(val)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 								#Python Data Types
