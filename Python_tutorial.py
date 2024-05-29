@@ -55,13 +55,11 @@ print(name1)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 						#Taking input from user
-#input(): This function first takes the input from the user and then evaluates the expression,
-# which means Python automatically identifies whether the user entered 
-#a string or a number or list. For example:
-# Python program showing a use of input() 
+#input(): Whatever value is entered, it is taken as string so it should be converted to specific data types.
    
-val = input("Enter your value: ") 
-print(val)
+val = input("Enter your value: ")
+Enter your value: 10
+print(type(val)) => o/p: <class 'str'>
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
                                  # Operators:
@@ -158,6 +156,18 @@ print(a1 is b1)
 # Membership operator
 print("G" in a1)
 print("N" not in b1)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+Strings:
+hello= 'hello'
+print(type(hello)) => <class 'str'>
+
+hello='hello'.upper()
+print(hello)
+
+hello='HELLO'.lower()
+print(hello)
+
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 								#Python Data Types
