@@ -4,7 +4,7 @@
 #Unlike Sets, list does not need a built-in function for creation of list.
 #Note  Unlike Sets, list may contain mutable elements.
   
-#---------------------------------------------- Creating a List---------------------------------------------------------
+#---------------------------------------------- Creating/Initilizing a List---------------------------------------------------------
 List = []
 print("Blank List: ")
 print(List)
@@ -184,78 +184,7 @@ Initial List:
 List after performing Extend Operation: 
 [1, 2, 3, 4, 8, 'Geeks', 'Always']
 '''
-
-#------------------------------------------------Removing Elements from the List-----------------------------------
-#Using remove() method
-#Elements can be removed from the List by using built-in remove() function but an Error
-#arises if element does not exist in the set. Remove() method only removes one element at a time, 
-#to remove range of elements, iterator is used. The remove() method removes the specified item.
-
-#Note  Remove method in List will only remove the first occurrence of the searched element.
-  
-# Creating a List
-List = [1, 2, 3, 4, 5, 6, 
-        7, 8, 9, 10, 11, 12]
-print("Initial List: ")
-print(List)
-  
-# Removing elements from List
-# using Remove() method
-List.remove(5)
-List.remove(6)
-print("\nList after Removal of two elements: ")
-print(List)
-  
-# Removing elements from List
-# using iterator method
-for i in range(1, 5):
-    List.remove(i)
-print("\nList after Removing a range of elements: ")
-print(List)
-
-'''
-Output:
-Initial List: 
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-
-List after Removal of two elements: 
-[1, 2, 3, 4, 7, 8, 9, 10, 11, 12]
-
-List after Removing a range of elements: 
-[7, 8, 9, 10, 11, 12]
-
-'''
-
-#Using pop() method
-#Pop() function can also be used to remove and return an element from the set, 
-#but by default it removes only the last element of the set, to remove element 
-#from a specific position of the List, index of the element is passed as an argument
-#to the pop() method.
-
-List = [1,2,3,4,5]
-  
-# Removing element from the 
-# Set using the pop() method
-List.pop()
-print("\nList after popping an element: ")
-print(List)
-  
-# Removing element at a 
-# specific location from the 
-# Set using the pop() method
-List.pop(2)
-print("\nList after popping a specific element: ")
-print(List)
-'''
-Output:
-List after popping an element: 
-[1, 2, 3, 4]
-
-List after popping a specific element: 
-[1, 2, 4]
-'''
-
-#--------------------------------------------Slicing of a List--------------------------------------------------
+#--------------------------------------------Accessing:Slicing of a List--------------------------------------------------
 #In Python List, there are multiple ways to print the whole List with all the elements,
 #but to print a specific range of elements from the list, we use Slice operation.
 #Slice operation is performed on Lists with the use of a colon(:). 
@@ -340,3 +269,74 @@ Elements sliced from index -6 to -1
 Printing List in reverse: 
 ['S', 'K', 'E', 'E', 'G', 'R', 'O', 'F', 'S', 'K', 'E', 'E', 'G']
 '''
+
+#------------------------------------------------Removing Elements from the List-----------------------------------
+#Using remove() method
+#Elements can be removed from the List by using built-in remove() function but an Error
+#arises if element does not exist in the set. Remove() method only removes one element at a time, 
+#to remove range of elements, iterator is used. The remove() method removes the specified item.
+
+#Note  Remove method in List will only remove the first occurrence of the searched element.
+  
+# Creating a List
+List = [1, 2, 3, 4, 5, 6, 
+        7, 8, 9, 10, 11, 12]
+print("Initial List: ")
+print(List)
+  
+# Removing elements from List
+# using Remove() method
+List.remove(5)
+List.remove(6)
+print("\nList after Removal of two elements: ")
+print(List)
+  
+# Removing elements from List
+# using iterator method
+for i in range(1, 5):
+    List.remove(i)
+print("\nList after Removing a range of elements: ")
+print(List)
+
+'''
+Output:
+Initial List: 
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+List after Removal of two elements: 
+[1, 2, 3, 4, 7, 8, 9, 10, 11, 12]
+
+List after Removing a range of elements: 
+[7, 8, 9, 10, 11, 12]
+
+'''
+
+#Using pop() method
+#Pop() function can also be used to remove and return an element from the set, 
+#but by default it removes only the last element of the set, to remove element 
+#from a specific position of the List, index of the element is passed as an argument
+#to the pop() method.
+
+List = [1,2,3,4,5]
+  
+# Removing element from the 
+# Set using the pop() method
+List.pop()
+print("\nList after popping an element: ")
+print(List)
+  
+# Removing element at a 
+# specific location from the 
+# Set using the pop() method
+List.pop(2)
+print("\nList after popping a specific element: ")
+print(List)
+'''
+Output:
+List after popping an element: 
+[1, 2, 3, 4]
+
+List after popping a specific element: 
+[1, 2, 4]
+'''
+
