@@ -7,207 +7,206 @@
 #Note: Creation of Python tuple without the use of parentheses is known as Tuple Packing. 
  
  #--------------------------------------------------Tuple creation---------------------------------------------------
-#Creating an empty Tuple
-Tuple1 = ()
-print("Initial empty Tuple: ")
-print (Tuple1)
- 
-#Creating a Tuple with the use of string
-Tuple1 = ('Geeks', 'For')
-print("\nTuple with the use of String: ")
-print(Tuple1)
- 
-# Creating a Tuple with the use of list
-list1 = [1, 2, 4, 5, 6]
-print("\nTuple using List: ")
-print(tuple(list1))
- 
-#Creating a Tuple with the use of built-in function
-Tuple1 = tuple('Geeks')
-print("\nTuple with the use of function: ")
-print(Tuple1)
-'''
-Output: 
-Initial empty Tuple: 
-()
 
-Tuple with the use of String: 
-('Geeks', 'For')
+1. Create
+Creating a set involves initializing it with elements, either directly or dynamically.
 
-Tuple using List: 
-(1, 2, 4, 5, 6)
+# Create an empty set
+my_set = set()
 
-Tuple with the use of function: 
-('G', 'e', 'e', 'k', 's')
-'''
- 
-#Creating a Tuple with Mixed Datatypes.
-#Tuples can contain any number of elements and of any datatype (like strings, integers, list, etc.). 
-#Tuples can also be created with a single element, but it is a bit tricky. 
-#Having one element in the parentheses is not sufficient, there must be a trailing comma to make it a tuple.
- 
-#Creating a Tuple with Mixed Datatype
-Tuple1 = (5, 'Welcome', 7, 'Geeks')
-print("\nTuple with Mixed Datatypes: ")
-print(Tuple1)
- 
-#Creating a Tuple with nested tuples
-Tuple1 = (0, 1, 2, 3)
-Tuple2 = ('python', 'geek')
-Tuple3 = (Tuple1, Tuple2)
-print("\nTuple with nested tuples: ")
-print(Tuple3)
- 
-#Creating a Tuple with repetition
-Tuple1 = ('Geeks',) * 3
-print("\nTuple with repetition: ")
-print(Tuple1)
- 
-#Creating a Tuple with the use of loop
-Tuple1 = ('Geeks')
-n = 5
-print("\nTuple with a loop")
-for i in range(int(n)):
-    Tuple1 = (Tuple1,)
-    print(Tuple1)
+# Create a set with initial elements
+my_set = {1, 2, 3, 4}
+
+# Dynamically populate a set
+my_set = set(range(1, 5))
+-----------------------------------------------------------------------
+2. Read
+Reading involves retrieving elements from the set or performing checks on its data.
+Check if an element exists:
+
+if 3 in my_set:
+    print("3 is in the set")
 	
-'''	
-Output: 
- 
+Iterate over the set:
+for element in my_set:
+    print(element)
 
-Tuple with Mixed Datatypes: 
-(5, 'Welcome', 7, 'Geeks')
+Get the size of the set:
+size = len(my_set)
+--------------------------------------------------------------------------------------------------
+3. Update
+Updating a set typically involves adding or modifying elements. Sets are unordered and don’t support direct indexing for updates, but new elements can be added, and existing elements can be removed and replaced.
+Add elements:
+my_set.add(5)  # Add a single element
+my_set.update({6, 7, 8})  # Add multiple elements
+Replace an element (remove and re-add, since sets don't support direct update):
 
-Tuple with nested tuples: 
-((0, 1, 2, 3), ('python', 'geek'))
+my_set.remove(2)  # Remove the old element
+my_set.add(10)    # Add the new element
+------------------------------------------------------------------------------------
+4. Delete
+Deleting involves removing elements or clearing the set.
 
-Tuple with repetition: 
-('Geeks', 'Geeks', 'Geeks')
+Remove a specific element:
 
-Tuple with a loop
-('Geeks',)
-(('Geeks',),)
-((('Geeks',),),)
-(((('Geeks',),),),)
-((((('Geeks',),),),),)
- '''
+my_set.remove(3)  # Raises KeyError if the element doesn't exist
+my_set.discard(3)  # Safe, does nothing if the element doesn't exist
+Remove and retrieve an arbitrary element:
 
-#-----------------------------------------------------------Accessing of Tuples------------------------------------------
-#Tuples are immutable, and usually, they contain a sequence of heterogeneous elements 
-#that are accessed via unpacking or indexing (or even by attribute in the case of named
-# tuples). Lists are mutable, and their elements are usually homogeneous and are 
-#accessed by iterating over the list.
-#Note: In unpacking of tuple number of variables on the left-hand side should be equal to a number of values in given tuple a.
- 
-#Accessing Tuple with Indexing
-Tuple1 = tuple("Geeks")
-print("\nFirst element of Tuple: ")
-print(Tuple1[1])
- 
- 
-#Tuple unpacking
-Tuple1 = ("Geeks", "For", "Geeks")
- 
-#This line unpack values of Tuple1
-a, b, c = Tuple1
-print("\nValues after unpacking: ")
-print(a)
-print(b)
-print(c)
-'''
-Output: 
-First element of Tuple:
-e
+removed_element = my_set.pop()  # Raises KeyError if the set is empty
+Clear the set:
 
-Values after unpacking:
-Geeks
-For
-Geeks
-'''
 
-#----------------------------------------------------------Concatenation of Tuples---------------------------------------
-#Concatenation of tuple is the process of joining two or more Tuples. Concatenation is done by the use of + operator. Concatenation of tuples is done always from the end of the original tuple. Other arithmetic operations do not apply on Tuples. 
-#Note- Only the same datatypes can be combined with concatenation, an error arises if a list and a tuple are combined. 
- 
-# Concatenation of tuples
-Tuple1 = (0, 1, 2, 3)
-Tuple2 = ('Geeks', 'For', 'Geeks')
- 
-Tuple3 = Tuple1 + Tuple2
- 
-# Printing first Tuple
-print("Tuple 1: ")
-print(Tuple1)
- 
-# Printing Second Tuple
-print("\nTuple2: ")
-print(Tuple2)
- 
-# Printing Final Tuple
-print("\nTuples after Concatenation: ")
-print(Tuple3)
+my_set.clear()
+Set Operations in CRUD Context
+Sets also allow advanced operations like union, intersection, and difference, which are useful in broader CRUD workflows, such as maintaining relationships or subsets.
 
-'''
-Output: 
+Union
+Combine sets:
 
-Tuple 1: 
-(0, 1, 2, 3)
 
-Tuple2: 
-('Geeks', 'For', 'Geeks')
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+combined = set1.union(set2)  # {1, 2, 3, 4, 5}
+Intersection
+Find common elements:
 
-Tuples after Concatenation: 
-(0, 1, 2, 3, 'Geeks', 'For', 'Geeks')
- '''
 
-#-----------------------------------------------------------------Slicing of Tuple--------------------------------------------
-#Slicing of a Tuple is done to fetch a specific range or slice of sub-elements from a Tuple. Slicing can also be done to lists and arrays. Indexing in a list results to fetching a single element whereas Slicing allows to fetch a set of elements. 
-#Note- Negative Increment values can also be used to reverse the sequence of Tuples 
- 
-# Slicing of a Tuple with Numbers
-Tuple1 = tuple('GEEKSFORGEEKS')
+common = set1.intersection(set2)  # {3}
+Difference
+Find elements in one set but not another:
 
-#--------------------------------------------------------------Remove from tuple--------------------------------------------
- 
-# Removing First element
-print("Removal of First Element: ")
-print(Tuple1[1:])
- 
-# Reversing the Tuple
-print("\nTuple after sequence of Element is reversed: ")
-print(Tuple1[::-1])
- 
-# Printing elements of a Range
-print("\nPrinting elements between Range 4-9: ")
-print(Tuple1[4:9])
-'''
-Output: 
 
-Removal of First Element: 
-('E', 'E', 'K', 'S', 'F', 'O', 'R', 'G', 'E', 'E', 'K', 'S')
+difference = set1.difference(set2)  # {1, 2}
+Symmetric Difference
+Find elements in either set but not both:
 
-Tuple after sequence of Element is reversed: 
-('S', 'K', 'E', 'E', 'G', 'R', 'O', 'F', 'S', 'K', 'E', 'E', 'G')
 
-Printing elements between Range 4-9: 
-('S', 'F', 'O', 'R', 'G')
- '''
+sym_diff = set1.symmetric_difference(set2)  # {1, 2, 4, 5}
+These operations can support CRUD functionality in applications like filtering, querying, or comparing data sets.
 
-#Deleting a Tuple
-#Tuples are immutable and hence they do not allow deletion of a part of it. The entire tuple gets deleted by the use of del() method. 
-#Note- Printing of Tuple after deletion results in an Error. 
- 
-# Deleting a Tuple
- 
-Tuple1 = (0, 1, 2, 3, 4)
-del Tuple1
- 
-#print(Tuple1)
-'''
-error:
-Traceback (most recent call last): 
-File /home/efa50fd0709dec08434191f32275928a.py, line 7, in 
-print(Tuple1) 
-NameError: name Tuple1 is not defined
-'''
+Example: Set Operations in a CRUD Workflow
+Here’s a simple example to demonstrate set operations within a CRUD context:
 
+
+# Create
+users = {"Alice", "Bob", "Charlie"}
+new_users = {"Diana", "Eve"}
+
+# Read
+if "Bob" in users:
+    print("Bob is in the system")
+
+# Update
+users.update(new_users)  # Add multiple new users
+users.add("Frank")       # Add a single user
+
+# Delete
+users.remove("Alice")  # Remove a specific user
+users.discard("Zoe")   # Safe removal, no error if "Zoe" doesn't exist
+
+# View all users after operations
+print(users)
+
+python tuple operations in CRUD format
+Tuples in Python are immutable, meaning their elements cannot be changed after creation. However, you can perform CRUD-like operations by creating new tuples, accessing their elements, or combining tuples. Here's how to approach CRUD operations with tuples:
+
+1. Create
+Creating a tuple involves initializing it with elements.
+
+Create an empty tuple:
+
+
+my_tuple = ()
+Create a tuple with elements:
+
+my_tuple = (1, 2, 3, 4)
+Create a tuple dynamically:
+
+my_tuple = tuple(range(5))  # (0, 1, 2, 3, 4)
+2. Read
+Accessing or retrieving elements from a tuple.
+Access by index:
+
+print(my_tuple[0])  # First element
+Slicing:
+
+print(my_tuple[1:3])  # (2, 3)
+Iterate through a tuple:
+
+for element in my_tuple:
+    print(element)
+Check membership:
+
+if 3 in my_tuple:
+    print("3 is in the tuple")
+3. Update
+Since tuples are immutable, you cannot modify them directly. However, you can create a new tuple based on existing ones.
+
+Simulate an update by creating a new tuple:
+
+
+my_tuple = (1, 2, 3)
+updated_tuple = my_tuple[:1] + (10,) + my_tuple[2:]  # (1, 10, 3)
+Append elements by concatenating:
+
+
+my_tuple = my_tuple + (4,)  # (1, 2, 3, 4)
+Replace multiple elements:
+
+
+my_tuple = (1, 2, 3, 4)
+new_tuple = (0,) + my_tuple[1:]  # (0, 2, 3, 4)
+4. Delete
+Tuples themselves are immutable, so elements cannot be deleted individually. However, you can work around this by creating a new tuple or deleting the entire tuple.
+
+Delete a tuple:
+
+
+del my_tuple
+Remove elements by reconstructing:
+
+
+my_tuple = (1, 2, 3, 4)
+filtered_tuple = tuple(x for x in my_tuple if x != 3)  # (1, 2, 4)
+Tuple Operations in CRUD Context
+Tuples can also be used in conjunction with tuple-specific operations to perform CRUD-like behaviors:
+
+Combine (Concatenation)
+Combine tuples to simulate adding new elements:
+
+
+tuple1 = (1, 2)
+tuple2 = (3, 4)
+combined = tuple1 + tuple2  # (1, 2, 3, 4)
+Repeat
+Repeat a tuple multiple times:
+
+
+repeated = tuple1 * 3  # (1, 2, 1, 2, 1, 2)
+Count or Index
+Retrieve information about elements:
+
+my_tuple = (1, 2, 3, 2)
+count = my_tuple.count(2)  # 2 occurrences of 2
+index = my_tuple.index(3)  # Index of first occurrence of 3
+Example: Tuple Operations in CRUD Workflow
+Here's an example demonstrating CRUD principles with tuples:
+
+
+# Create
+inventory = ("apple", "banana", "cherry")
+
+# Read
+if "banana" in inventory:
+    print("Banana is available")
+
+# Update (simulate by creating a new tuple)
+inventory = inventory + ("orange",)  # Add new item
+inventory = tuple(item for item in inventory if item != "cherry")  # Remove "cherry"
+
+# Delete (delete the entire tuple)
+del inventory
+
+# Output after each operation
+print(inventory)  # Results based on the operations performed
