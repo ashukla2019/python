@@ -1,3 +1,4 @@
+python- list is ordered and mutable. It is ordered, so we can perform slicing on it.
 Python lists can be used to implement CRUD (Create, Read, Update, Delete) operations effectively.
 Here's a breakdown of how each operation works in the context of lists:
 
