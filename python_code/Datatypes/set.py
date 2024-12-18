@@ -72,26 +72,4 @@ Find elements in either set but not both:
 
 sym_diff = set1.symmetric_difference(set2)  # {1, 2, 4, 5}
 These operations can support CRUD functionality in applications like filtering, querying, or comparing data sets.
--------------------------------------------------------------------------------------------------------------
-Example: Set Operations in a CRUD Workflow
-Here’s a simple example to demonstrate set operations within a CRUD context:
 
-
-# Create
-users = {"Alice", "Bob", "Charlie"}
-new_users = {"Diana", "Eve"}
-
-# Read
-if "Bob" in users:
-    print("Bob is in the system")
-
-# Update
-users.update(new_users)  # Add multiple new users
-users.add("Frank")       # Add a single user
-
-# Delete
-users.remove("Alice")  # Remove a specific user
-users.discard("Zoe")   # Safe removal, no error if "Zoe" doesn't exist
-
-# View all users after operations
-print(users)
