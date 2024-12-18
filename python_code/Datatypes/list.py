@@ -1,4 +1,8 @@
-python- list is ordered and mutable. It is ordered, so we can perform slicing on it.
+List Characteristics
+Ordered - They maintain the order of elements.
+Mutable - Items can be changed after creation.
+Allow duplicates - They can contain duplicate values.
+-----------------------------------------------------------------------------------------
 Python lists can be used to implement CRUD (Create, Read, Update, Delete) operations effectively.
 Here's a breakdown of how each operation works in the context of lists:
 
@@ -8,20 +12,27 @@ Creating or adding elements to a list can be done using methods like append(), e
 # Create an empty list
 my_list = []
 
-# Add elements
-my_list.append(10)           # Adds 10 to the end of the list
-my_list.append(20)           # Adds 20 to the end of the list
-print(my_list)               # Output: [10, 20]
+# a list of three elements
+ages = [19, 26, 29]
+print(ages)
+# Output: [19, 26, 29]
 
-# Add multiple elements
-my_list.extend([30, 40])     # Adds elements from another iterable
-print(my_list)               # Output: [10, 20, 30, 40]
+#List Items of Different Types: a list containing strings and numbers
+student = ['Jack', 32, 'Computer Science']
+print(student)
 
-# Add element at a specific index
-my_list.insert(2, 25)        # Inserts 25 at index 2
-print(my_list)               # Output: [10, 20, 25, 30, 40]
+#Using list() to Create Lists: We can use the built-in list() function to convert other iterables (strings, dictionaries, tuples, etc.) to a list.
+x = "axz"
+
+# convert to list
+result = list(x)
+
+print(result)  # ['a', 'x', 'z']
 ----------------------------------------------------------------------------------------------
 2. Read: Accessing Elements in a List
+Each element in a list is associated with a number, known as an index.
+The index of first item is 0, the index of second item is 1, and so on.
+
 Reading elements can be done using indexing, slicing, or iteration.
 
 # List for demonstration
@@ -30,9 +41,6 @@ my_list = [10, 20, 30, 40, 50]
 # Access element by index
 print(my_list[0])            # Output: 10 (first element)
 print(my_list[-1])           # Output: 50 (last element)
-
-# Access a slice of the list
-print(my_list[1:4])          # Output: [20, 30, 40]
 
 # Iterate through the list
 for item in my_list:
@@ -43,25 +51,86 @@ for item in my_list:
 # 30
 # 40
 # 50
+
+#Negative Indexing in Python: Python also supports negative indexing. The index of the last element is -1, the second-last 
+element is -2, and so on.
+languages = ['Python', 'Swift', 'C++']
+
+# Access item at index 0
+print(languages[-1])   # C++
+
+# Access item at index 2
+print(languages[-3])   # Python
+
+#Slicing of a List in Python: In Python, it is possible to access a section of items from the list using the slicing operator :
+my_list = ['p', 'r', 'o', 'g', 'r', 'a', 'm']
+
+# items from index 2 to index 4
+print(my_list[2:5])
+
+# items from index 5 to end
+print(my_list[5:])
+
+# items beginning to end
+print(my_list[:])
 ----------------------------------------------------------------------------------------
 3. Update: Modifying Elements in a List
 Updating elements involves changing specific elements by their index or updating multiple elements using slicing.
 
-# List for demonstration
-my_list = [10, 20, 30, 40, 50]
+# using append method 
+fruits = ['apple', 'banana', 'orange']
+fruits.append('cherry')
 
-# Update a single element
-my_list[2] = 35             # Update index 2 with 35
-print(my_list)              # Output: [10, 20, 35, 40, 50]
+print('Updated List:', fruits)
+Output:
+Updated List: ['apple', 'banana', 'orange', 'cherry']
 
-# Update multiple elements using slicing
-my_list[1:3] = [25, 45]     # Replace elements at index 1 and 2
-print(my_list)              # Output: [10, 25, 45, 40, 50]
+#The insert() method adds an element at the specified index. For example,
+fruits = ['apple', 'banana', 'orange']
+print("Original List:", fruits) 
 
-# Append or insert elements to add new data
-my_list.append(60)          # Add 60 to the end
-my_list.insert(1, 15)       # Insert 15 at index 1
-print(my_list)              # Output: [10, 15, 25, 45, 40, 50, 60]
+# insert 'cherry' at index 2
+fruits.insert(2, 'cherry')
+
+print("Updated List:", fruits)
+
+Output:
+Original List: ['apple', 'banana', 'orange']
+Updated List: ['apple', 'banana', 'cherry', 'orange']
+
+#Add Elements to a List From Other Iterables: We use the extend() method to add elements to a list from other iterables. For example,
+
+numbers = [1, 3, 5]
+print('Numbers:', numbers)
+
+even_numbers  = [2, 4, 6]
+
+# adding elements of one list to another
+numbers.extend(even_numbers)
+
+print('Updated Numbers:', numbers) 
+
+#Output
+Numbers: [1, 3, 5]
+Updated Numbers: [1, 3, 5, 2, 4, 6]
+
+#Change List Items
+We can change the items of a list by assigning new values using the = operator. For example,
+
+colors = ['Red', 'Black', 'Green']
+print('Original List:', colors)
+
+# changing the third item to 'Blue'
+colors[2] = 'Blue'
+
+print('Updated List:', colors)
+Run Code
+Output
+
+Original List: ['Red', 'Black', 'Green']
+Updated List: ['Red', 'Black', 'Blue']
+Here, we have replaced the element at index 2: 'Green' with 'Blue'.
+
 -------------------------------------------------------------------------------------
 4. Delete: Removing Elements from a List
 Deleting elements can be done using del, remove(), pop(), or slicing.
@@ -91,30 +160,3 @@ print(my_list)              # Output: [10, 50]
 my_list.clear()             # Empties the list
 print(my_list)              # Output: []
 
---------------------------------------------------------------------------------------------------
-Full CRUD Workflow Example
-
-# Initialize an empty list (Create)
-students = []
-
-# Add students to the list (Create)
-students.append("Alice")
-students.append("Bob")
-students.append("Charlie")
-print("Students after adding:", students)  # Output: ['Alice', 'Bob', 'Charlie']
-
-# Read the list of students
-print("Student at index 1:", students[1])  # Output: Bob
-print("All students:", students)          # Output: ['Alice', 'Bob', 'Charlie']
-
-# Update a student's name
-students[1] = "Bobby"
-print("Students after update:", students) # Output: ['Alice', 'Bobby', 'Charlie']
-
-# Delete a student by name
-students.remove("Alice")
-print("Students after deletion:", students) # Output: ['Bobby', 'Charlie']
-
-# Clear all students
-students.clear()
-print("Students after clearing:", students) # Output: []
