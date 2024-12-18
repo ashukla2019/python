@@ -1,7 +1,7 @@
-Feature	        List	        Tuple	             Set	                     Dictionary
-Ordered?	      ✅ Yes	      ✅ Yes	          ❌ No	                  ✅ Yes (since Python 3.7)
-Mutable?	      ✅ Yes	      ❌ No	            ✅ Yes	                ✅ Yes
-Duplicates?	    ✅ Allowed	  ✅ Allowed	      ❌ Not allowed	        ❌ Not allowed (keys)
-Unique Keys?	  N/A	          N/A               N/A	                    ✅ Yes
+Choosing the right type depends on your needs:
 
+List: Sequential, ordered, modifiable/mutable, duplicate
+Tuple: Fixed, ordered, immutable.
+Set: Unique, unordered, mutable, mathematical operations.
+Dictionary: Key-value mappings for fast lookups.
 
