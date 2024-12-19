@@ -1,46 +1,72 @@
-#-----------------------------------------------------------------------------------------------------------------------------------------------
-# String: A string is a collection of one or more characters put in a single quote, double-quote or triple quote. 
-# In python there is no character data type, a character is a string of length one. It is represented by str class. 
-# Strings in Python can be created using single quotes or double quotes or even triple quotes.
-#      				0  1  2  3  4  5  6  7  8  9  10
-#      				A  N  K  I  T  S  H  U  K  L  A
-#     				-11-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 
+Creating Strings
+# Single quotes
+string1 = 'Hello, world!'
 
-#-----------------------------------------------Creating a String-------------------------------------------
-String1 = "GeeksForGeeks"
-     
-#-----------------------------------------------Accessing characters in Python----------------------------	 
-# Printing First character 
-print(String1[0])  
-     
-# Printing Last character 
-print(String1[-1])  
+# Double quotes
+string2 = "Python is fun!"
 
-String1 = "Hello, I'm a Geek"
-     
-#--------------------------------------------------updation and deletion------------------------------------------------------
-# Updating a character, will throw an error.
-#String1[2] = 'p' //can not modify character by index.
-   
-# Deleting a character using del will throw an error.  
-#del String1[2]
+# Triple quotes for multiline strings
+string3 = """This is a
+multiline string."""
 
-#----------------------------------------------------String Slicing-------------------------------------------------
-#To access a range of characters in the String, method of slicing is used. 
-#Slicing in a String is done by using a Slicing operator (colon). 
-String1 = "GeeksForGeeks"
-# Printing 3rd to 12th character
-print("\nSlicing characters from 3-12: ")
-print(String1[3:12])
+Basic String Operations
+# Concatenation
+combined = string1 + " " + string2
 
-# Printing characters between
-# 3rd and 2nd last character
-print("\nSlicing characters between " +
-    "3rd and 2nd last character: ")
-print(String1[3:-2])
+# Repetition
+repeated = string1 * 3
 
-#Updating Entire String:
-String1 = "Hello, I'm a Geek"
-String1 = "Welcome to the Geek World"
-print(String1)
+# Length
+length = len(string1)
 
+# Accessing characters
+first_char = string1[0]
+last_char = string1[-1]
+
+# Slicing
+substring = string1[0:5]
+String Methods
+
+# Changing case
+upper_case = string1.upper()
+lower_case = string1.lower()
+
+# Splitting and joining
+words = string2.split()  # Splits into a list of words
+joined = " ".join(words)  # Joins list into a string
+
+# Stripping whitespace
+trimmed = "  Hello  ".strip()
+
+# Replace
+replaced = string1.replace("world", "Python")
+
+# Finding substrings
+index = string1.find("world")  # Returns -1 if not found
+
+# Checking content
+is_alpha = "abc".isalpha()
+is_digit = "123".isdigit()
+String Formatting
+
+# f-strings (Python 3.6+)
+name = "Alice"
+formatted = f"Hello, {name}!"
+
+# format() method
+formatted = "Hello, {}!".format(name)
+
+# Old-style formatting
+formatted = "Hello, %s!" % name
+Escape Characters
+
+# Newline and tab
+new_line = "Hello\nWorld"
+tabbed = "Hello\tWorld"
+
+# Escape quotes
+quote = "She said, \"Python is awesome!\""
+
+
+Strings are immutable in Python, so methods that modify a string return a new string.
+Use r"raw strings" to avoid escaping backslashes in paths or regex patterns.
