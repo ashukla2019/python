@@ -64,98 +64,98 @@ print(type(val)) => o/p: <class 'str'>
 #-----------------------------------------------------------------------------------------------------------------------------------------------
                                  # Operators:
 #Arithmetic operators: Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication and division.
-# Examples of Arithmetic Operator 
-a = 9
-b = 4
+	# Examples of Arithmetic Operator 
+	a = 9
+	b = 4
    
-# Addition of numbers 
-add = a + b 
-# Subtraction of numbers  
-sub = a - b 
+	# Addition of numbers 
+	add = a + b 
+	# Subtraction of numbers  
+	sub = a - b 
    
-# print results 
-print(add) 
-print(sub) 
+	# print results 
+	print(add) 
+	print(sub) 
 
 #Relational Operators: Relational operators compares the values. It either returns True or False according to the condition:
-# Examples of Relational Operators 
-a = 13
-b = 33
+	# Examples of Relational Operators 
+	a = 13
+	b = 33
+	   
+	# a > b is False 
+	print(a > b) 
+	   
+	# a < b is True 
+	print(a < b) 
+	   
+	# a == b is False 
+	print(a == b) 
    
-# a > b is False 
-print(a > b) 
-   
-# a < b is True 
-print(a < b) 
-   
-# a == b is False 
-print(a == b) 
-   
-# a != b is True 
-print(a != b) 
-   
-# a >= b is False 
-print(a >= b) 
-   
-# a <= b is True 
-print(a <= b)
+	# a != b is True 
+	print(a != b) 
+	   
+	# a >= b is False 
+	print(a >= b) 
+	   
+	# a <= b is True 
+	print(a <= b)
 
 #Logical Operators: Logical operators perform Logical AND, Logical OR and Logical NOT operations.
-# Examples of Logical Operator 
-a = True
-b = False
-   
-# Print a and b is False 
-print(a and b) 
-   
-# Print a or b is True 
-print(a or b) 
-   
-# Print not a is False 
-print(not a) 
+	# Examples of Logical Operator 
+	a = True
+	b = False
+	   
+	# Print a and b is False 
+	print(a and b) 
+	   
+	# Print a or b is True 
+	print(a or b) 
+	   
+	# Print not a is False 
+	print(not a) 
 
 #Bitwise operators: Bitwise operator acts on bits and performs bit by bit operation.
-# Examples of Bitwise operators 
-a = 10
-b = 4
-   
-# Print bitwise AND operation   
-print(a & b) 
-   
-# Print bitwise OR operation 
-print(a | b) 
-   
-# Print bitwise NOT operation  
-print(~a) 
-   
-# print bitwise XOR operation  
-print(a ^ b) 
-   
-# print bitwise right shift operation  
-print(a >> 2) 
-   
-# print bitwise left shift operation  
-print(a << 2)
+	# Examples of Bitwise operators 
+	a = 10
+	b = 4
+	   
+	# Print bitwise AND operation   
+	print(a & b) 
+	   
+	# Print bitwise OR operation 
+	print(a | b) 
+	   
+	# Print bitwise NOT operation  
+	print(~a) 
+	   
+	# print bitwise XOR operation  
+	print(a ^ b) 
+	   
+	# print bitwise right shift operation  
+	print(a >> 2) 
+	   
+	# print bitwise left shift operation  
+	print(a << 2)
 
 #Assignment operators: Assignment operators are used to assign values to the variables.
-#Special operators: Special operators are of two types-
-
-#Identity operator that contains is and is not.
-#Membership operator that contains in and not in.
-
-# Examples of Identity and 
-# Membership operator
-  
-a1 = 'GeeksforGeeks'
-b1 = 'GeeksforGeeks'
- 
-# Identity operator
-print(a1 is not b1)
-print(a1 is b1)
- 
-# Membership operator
-print("G" in a1)
-print("N" not in b1)
+	#Special operators: Special operators are of two types-
+	
+	#Identity operator that contains is and is not.
+	#Membership operator that contains in and not in.
+	
+	# Examples of Identity and 
+	# Membership operator
+	  
+	a1 = 'GeeksforGeeks'
+	b1 = 'GeeksforGeeks'
+	 
+	# Identity operator
+	print(a1 is not b1)
+	print(a1 is b1)
+	 
+	# Membership operator
+	print("G" in a1)
+	print("N" not in b1)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 Strings:
@@ -163,101 +163,77 @@ hello= 'hello'
 print(type(hello)) => <class 'str'>
 
 Creating Strings
-# Single quotes
-string1 = 'Hello, world!'
-
-# Double quotes
-string2 = "Python is fun!"
-
-# Triple quotes for multiline strings
-string3 = """This is a
-multiline string."""
+	# Single quotes
+	string1 = 'Hello, world!'
+	
+	# Double quotes
+	string2 = "Python is fun!"
+	
+	# Triple quotes for multiline strings
+	string3 = """This is a
+	multiline string."""
 
 Basic String Operations
-# Concatenation
-combined = string1 + " " + string2
-
-# Repetition
-repeated = string1 * 3
-
-# Length
-length = len(string1)
-
-# Accessing characters
-first_char = string1[0]
-last_char = string1[-1]
-
-# Slicing
-substring = string1[0:5]
-String Methods
-
-# Changing case
-upper_case = string1.upper()
-lower_case = string1.lower()
-
-# Splitting and joining
-words = string2.split()  # Splits into a list of words
-joined = " ".join(words)  # Joins list into a string
-
-# Stripping whitespace
-trimmed = "  Hello  ".strip()
-
-# Replace
-replaced = string1.replace("world", "Python")
-
-# Finding substrings
-index = string1.find("world")  # Returns -1 if not found
-
-# Checking content
-is_alpha = "abc".isalpha()
-is_digit = "123".isdigit()
-String Formatting
-
-# f-strings (Python 3.6+)
-name = "Alice"
-formatted = f"Hello, {name}!"
-
-# format() method
-formatted = "Hello, {}!".format(name)
-
-# Old-style formatting
-formatted = "Hello, %s!" % name
-Escape Characters
-
-# Newline and tab
-new_line = "Hello\nWorld"
-tabbed = "Hello\tWorld"
-
-# Escape quotes
-quote = "She said, \"Python is awesome!\""
-
+	# Concatenation
+	combined = string1 + " " + string2
+	
+	# Repetition
+	repeated = string1 * 3
+	
+	# Length
+	length = len(string1)
+	
+	# Accessing characters
+	first_char = string1[0]
+	last_char = string1[-1]
+	
+	# Slicing
+	substring = string1[0:5]
+	String Methods
+	
+	# Changing case
+	upper_case = string1.upper()
+	lower_case = string1.lower()
+	
+	# Splitting and joining
+	words = string2.split()  # Splits into a list of words
+	joined = " ".join(words)  # Joins list into a string
+	
+	# Stripping whitespace
+	trimmed = "  Hello  ".strip()
+	
+	# Replace
+	replaced = string1.replace("world", "Python")
+	
+	# Finding substrings
+	index = string1.find("world")  # Returns -1 if not found
+	
+	# Checking content
+	is_alpha = "abc".isalpha()
+	is_digit = "123".isdigit()
+	String Formatting
+	
+	# f-strings (Python 3.6+)
+	name = "Alice"
+	formatted = f"Hello, {name}!"
+	
+	# format() method
+	formatted = "Hello, {}!".format(name)
+	
+	# Old-style formatting
+	formatted = "Hello, %s!" % name
+	Escape Characters
+	
+	# Newline and tab
+	new_line = "Hello\nWorld"
+	tabbed = "Hello\tWorld"
+	
+	# Escape quotes
+	quote = "She said, \"Python is awesome!\""
 
 Strings are immutable in Python, so methods that modify a string return a new string.
 Use r"raw strings" to avoid escaping backslashes in paths or regex patterns.
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------
-								#Python Data Types
-# Numeric(Integer, Float) --> In Python, numeric data type represent the data which has numeric value. Numeric value can be interger, 
-# floating number or even complex numbers. These values are defined as int, float and complex.
-print("Type of a: ", type(5)) 
-print("\nType of b: ", type(5.0)) 
-# Dictionary->
-# Boolean 
-# Set
-# Sequence Type ----> Strings, List, Tuples
-
-#--------------------------------------------------------------------------------
-#List: mutable, ordered and that's why slicing possible
-#Tuple: Immutable, ordered and that's why slicing possible 
-#set: mutable, unordered and slicing not possible.
-
-'''
-Tuples are more memory efficient than the lists. When it comes to the time efficiency, again tuples have a slight advantage over the lists especially when lookup to a value is considered
-
-'''
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------
-
 # Decision Making
 # Decision Making in programming is similar to decision making in real life. A programming language uses control statements to control the flow of execution of the program based on certain conditions. These are used to cause the flow of execution to advance and branch based on changes to the state of a program.
 
@@ -289,7 +265,6 @@ Output:
 Even Number
 Odd Number
 '''
-
 # Example 2: To demonstrate nested-if and if-elif
 # Python program to demonstrate
 # decision making
@@ -316,7 +291,6 @@ Number is divisible by both 2 and 5
 a is 10
 '''
 #-----------------------------------------------------------------------------------------------------------------------------------------------
-
 # Control flow (Loops)
 # Loops in programming come into use when we need to repeatedly execute a block of statements. For example: Suppose we want to print 'Hello World' 10 times. 
 # This can be done with the help of loops. The loops in Python are:
@@ -353,95 +327,120 @@ Hello Geek
 1
 11
 '''
+---------------------------------------------------------------------------------------------------------------------------------------------	
 # For and for-else loop
+A for loop in Python is used to iterate over a sequence (such as a list, tuple, dictionary, set, or string) or any object that supports iteration. 
+Here's the basic syntax:
+	for variable in sequence:
+	    # Code block to execute
+	Examples
+	1. Iterating Over a List:
 
-# for-loop-python
-# Python program to illustrate  
-# Iterating over a list  
-print("List Iteration")  
-l = ["geeks", "for", "geeks"]  
-for i in l:  
-    print(i) 
-     
-# Iterating over a String  
-print("\nString Iteration")      
-s = "Geeks"
-for i in s :  
-    print(i)  
-     
-print("\nFor-else loop")
-for i in s:  
-    print(i)  
-else: # Executed because no break in for  
-    print("No Break\n")  
-   
-for i in s:  
-    print(i)  
-    break
-else: # Not executed as there is a break  
-    print("No Break")  
-'''
-Output:
+	fruits = ["apple", "banana", "cherry"]
+	for fruit in fruits:
+	    print(fruit)
+	Output:
+	apple
+	banana
+	cherry
+2. Iterating Over a String:
+	word = "Python"
+	for letter in word:
+	    print(letter)
+	Output:
+	P
+	y
+	t
+	h
+	o
+	n
+3. Using range(): The range() function generates a sequence of numbers.
+	
+	Example with range():
+	for i in range(5):
+	    print(i)
+	Output:	
+	0
+	1
+	2
+	3
+	4
+	Example with start and end:
+	for i in range(1, 6):
+	    print(i)
+	Output:		
+	1
+	2
+	3
+	4
+	5
 
-List Iteration
-geeks
-for
-geeks
-
-String Iteration
-G
-e
-e
-k
-s
-
-For-else loop
-G
-e
-e
-k
-s
-No Break
-
-G
-'''
+	Example with step:
+	for i in range(0, 10, 2):
+	    print(i)
+	Output:
+	0
+	2
+	4
+	6
+	8
+4. Iterating Over a Dictionary:
+	person = {"name": "Alice", "age": 25, "city": "New York"}
+	for key, value in person.items():
+	    print(f"{key}: {value}")
+	Output:
+	name: Alice
+	age: 25
+	city: New York
+5. Nested For Loops:
+	for i in range(3):
+	    for j in range(2):
+	        print(f"i={i}, j={j}")
+	Output:
+	i=0, j=0
+	i=0, j=1
+	i=1, j=0
+	i=1, j=1
+	i=2, j=0
+	i=2, j=1
+6. break and continue in For Loops:
+	break: Exits the loop entirely.
+	continue: Skips the current iteration and moves to the next.
+	Example with break:
+	for i in range(5):
+	    if i == 3:
+	        break
+	    print(i)
+	Output:
+	0
+	1
+	2
+	Example with continue:
+	python
+	Copy code
+	for i in range(5):
+	    if i == 3:
+	        continue
+	    print(i)
+	Output:
+	0
+	1
+	2
+	4
+7. else with For Loops:
+	An else block after a for loop executes only if the loop completes normally (i.e., not terminated by a break).
+	for i in range(5):
+	    print(i)
+	else:
+	    print("Loop finished without a break.")
+	Output:
+	0
+	1
+	2
+	3
+	4
+	Loop finished without a break.
 #-----------------------------------------------------------------------------------------------------------------------------------------------
-
-# Loop control statements
-# Loop control statements change execution from its normal sequence. Following are the loop control statements provided by Python:
-# Break: Break statement in Python is used to bring the control out of the loop when some external condition is triggered.
-# Continue: Continue statement is opposite to that of break statement, instead of terminating the loop, it forces to execute the next iteration of the loop.
-# Pass: Pass statement is used to write empty loops. Pass is also used for empty control statement, function and classes.
-
-# Python program to demonstrate break, continue and pass 
-   
-s = 'geeksforgeeks'
- 
-for letter in s: 
-    if letter == 'e' or letter == 's': 
-        break
-    print(letter)
-print()
- 
-for letter in s: 
-    if letter == 'e' or letter == 's': 
-        continue
-    print(letter)
-print()    
- 
-for letter in s: 
-    if letter == 'e' or letter == 's': 
-        pass
-    print(letter)
-'''
-Output:
-
-g 
-g k f o r g k 
-g e e k s f o r g e e k s 
-'''
-#-----------------------------------------------------------------------------------------------------------------------------------------------
-
 # Functions
 # Functions are generally the block of codes or statements in a program that gives the user the ability to reuse the same code which ultimately saves the excessive use of memory, acts as a time saver and more importantly, provides better readability of the code. So basically, a function is a collection of statements that perform some specific task and return the result to the caller. A function can also perform some specific task without returning anything. In Python, def keyword is used to create functions.
 # Python program to demonstrate
