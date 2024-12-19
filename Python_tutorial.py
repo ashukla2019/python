@@ -331,14 +331,13 @@ Hello Geek
 # For and for-else loop
 A for loop in Python is used to iterate over a sequence (such as a list, tuple, dictionary, set, or string) or any object that supports iteration. 
 Here's the basic syntax:
-	for variable in sequence:
-	    # Code block to execute
-	Examples
-	1. Iterating Over a List:
-
+for variable in sequence:
+    # Code block to execute
+	
+1. Iterating Over a List:
 	fruits = ["apple", "banana", "cherry"]
-	for fruit in fruits:
-	    print(fruit)
+		for fruit in fruits:
+	    	print(fruit)
 	Output:
 	apple
 	banana
@@ -355,8 +354,6 @@ Here's the basic syntax:
 	o
 	n
 3. Using range(): The range() function generates a sequence of numbers.
-	
-	Example with range():
 	for i in range(5):
 	    print(i)
 	Output:	
@@ -446,118 +443,102 @@ Here's the basic syntax:
 # Python program to demonstrate
 # functions
  
- 
-# Defining functions
-def ask_user():
-    print("Hello Geeks")
- 
-# Function that returns sum
-# of first 10 numbers
-def my_func():
-    a = 0
-    for i in range(1, 11):
-        a = a + i
-    return a
-     
-# Calling functions
-ask_user()
-res = my_func()
-print(res)
-'''
-Output:
+1. Direct Function Call
+The most common way to call a function.
+	def greet():
+    		print("Hello!")
 
-Hello Geeks
-55
-'''
+	greet()  # Output: Hello!
 
+2. Function Call with Arguments: Functions can accept arguments and return values.
+	def add(a, b):
+    		return a + b
 
-# Function with arguments
-# Default arguments: A default argument is a parameter that assumes a default value if a value is not provided in the function call for that argument.
-# Python program to demonstrate default arguments 
-     
-     
-def myFun(x, y = 50): 
-   print("x: ", x) 
-   print("y: ", y) 
-       
-# Driver code
-myFun(10)
+	result = add(5, 3)  # result = 8
+	print(result)
 
-'''
-Output:
+3. Using Default Arguments: If arguments are not provided, the default values are used.
+	def greet(name="Guest"):
+    		print(f"Hello, {name}!")
+	greet()           # Output: Hello, Guest!
+	greet("Alice")    # Output: Hello, Alice!
 
-('x: ', 10)
-('y: ', 50)
-'''
+4. Using Keyword Arguments: You can specify arguments by name, in any order.
+	def introduce(name, age):
+    		print(f"My name is {name} and I'm {age} years old.")
+	introduce(age=25, name="Bob")  # Output: My name is Bob and I'm 25 years old.
 
-# Keyword arguments: The idea is to allow caller to specify argument name with values so that caller does not need to remember order of parameters.
-# Python program to demonstrate Keyword Arguments 
-def student(firstname, lastname):  
-     print(firstname, lastname)  
-     
-     
-# Keyword arguments                   
-student(firstname ='Geeks', lastname ='Practice')     
-student(lastname ='Practice', firstname ='Geeks') 
+5. Passing Arbitrary Arguments: For unknown or variable numbers of arguments, use *args or **kwargs.
+	def display(*args, **kwargs):
+    		print("Positional arguments:", args)
+    		print("Keyword arguments:", kwargs)
 
-'''
-Output:
+	display(1, 2, 3, name="Alice", age=25)
+	# Output:
+	# Positional arguments: (1, 2, 3)
+	# Keyword arguments: {'name': 'Alice', 'age': 25}
+											     
+6. Calling Functions Dynamically: Using a reference to the function.
+	def greet():
+    		print("Hello!")
 
-('Geeks', 'Practice')
-('Geeks', 'Practice')
-'''
+	func = greet  # Assign function to a variable
+	func()        # Output: Hello!
+	    
+7. Calling Functions from a Dictionary: Functions can be stored in dictionaries and called dynamically.
+	def add(a, b):
+    		return a + b
 
-# Variable length arguments: In Python a function can also have variable number of arguments. This can be used in the case when we do not know in advance the number of arguments that will be passed into a function.
-# Python program to demonstrate
-# variable length arguments
- 
- 
-# variable arguments
-def myFun1(*argv):  
-    for arg in argv:  
-        print(arg) 
-         
-# variable keyword arguments
-def myFun2(**kwargs):
-    for key, value in kwargs.items(): 
-        print ("% s == % s" %(key, value)) 
-   
-# Driver code 
-myFun1('Hello', 'Welcome', 'to', 'GeeksforGeeks')
-print()
-myFun2(first ='Geeks', mid ='for', last ='Geeks')
-'''
-Output:
+	def subtract(a, b):
+   	 return a - b
 
-Hello Welcome to GeeksforGeeks 
-first == Geeks
-last == Geeks
-mid == for
-'''
+	operations = {
+	    "add": add,
+	    "subtract": subtract
+	}
 
+	result = operations["add"](10, 5)  # result = 15
+	print(result)
+
+8. Calling a Method on an Object: When using classes, methods are called using the dot operator.
+	class Greeter:
+    		def greet(self):
+       			print("Hello from a class!")
+
+	greeter = Greeter()
+	greeter.greet()  # Output: Hello from a class!
+
+9. Using eval() or exec(): Avoid these for security reasons unless absolutely necessary.
+	code = "print('Hello from eval')"
+	eval(code)  # Output: Hello from eval
+
+10. Calling Anonymous Functions (lambda): Lambdas are small, inline functions.
+	add = lambda x, y: x + y
+	print(add(3, 5))  # Output: 8
+
+11. Using functools.partial: Partial functions pre-fill some arguments.
+	from functools import partial
+
+	def power(base, exponent):
+    		return base ** exponent
+
+	square = partial(power, exponent=2)
+	print(square(4))  # Output: 16
+
+12. Using map, filter, and reduce: Higher-order functions to apply a function to iterables.
+	nums = [1, 2, 3, 4]
+	squared = list(map(lambda x: x**2, nums))
+	print(squared)  # Output: [1, 4, 9, 16]
+
+13. Using a Function Pointer in Modules:You can reference and call functions dynamically by their name in a module.
+	import math
+	func_name = "sqrt"
+	result = getattr(math, func_name)(16)  # Call math.sqrt(16)
+	print(result)  # Output: 4.0
 #-----------------------------------------------------------------------------------------------------------------------------------------------
+Data Types:
 
-# Lambda functions
-# In Python, the lambda/anonymous function means that a function is without a name. The lambda keyword is used to create anonymous functions. Lambda function can have any number of arguments but has only one expression.
-# Python code to demonstrate   
-# labmda function  
- 
-# Cube using lambda
-cube = lambda x: x * x*x  
-print(cube(7))
- 
-# List comprehension using lambda
-a = [(lambda x: x * 2)(x) for x in range(5)]
-print(a)
-'''
-Output:
-
-343
-[0, 2, 4, 6, 8]
-'''
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 # Object Oriented Programming
 # Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming. 
 # The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function
