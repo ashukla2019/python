@@ -535,10 +535,343 @@ The most common way to call a function.
 	func_name = "sqrt"
 	result = getattr(math, func_name)(16)  # Call math.sqrt(16)
 	print(result)  # Output: 4.0
-#-----------------------------------------------------------------------------------------------------------------------------------------------
-Data Types:
+#------------------------------------------------Data Types:-----------------------------------------------------------------------------------------------
+---------------------------LIST-----------------------------------------------------
+1. Creation
+	# Empty list
+	my_list = []
+	
+	# List with elements
+	my_list = [1, 2, 3, 4]
+	
+	# Mixed data types
+	my_list = [1, "hello", 3.14]
 
----------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Accessing Elements
+	Indexing: Access elements by their position.
+	my_list = [10, 20, 30, 40]
+	print(my_list[0])  # 10 (first element)
+	print(my_list[-1]) # 40 (last element)
+
+	Slicing: Extract portions of the list.
+	print(my_list[1:3])  # [20, 30]
+	print(my_list[:2])   # [10, 20]
+
+3. Adding Elements
+	append(): Adds an element to the end.
+	my_list.append(50)
+	
+	extend(): Adds elements from another list.
+	my_list.extend([60, 70])
+
+	insert(): Inserts an element at a specific index.
+	my_list.insert(2, 25)  # Inserts 25 at index 2
+		
+	Modifying Elements
+	my_list[0] = 15  # Change first element to 15
+		
+4. Removing Elements
+	remove(): Removes the first occurrence of a value.
+	my_list.remove(20)
+	pop(): Removes and returns an element by index.
+	my_list.pop()    # Removes last element
+	my_list.pop(1)   # Removes element at index 1
+	clear(): Removes all elements.
+	my_list.clear()
+6. Searching
+	index(): Returns the index of the first occurrence of a value.
+	my_list.index(30)
+		
+	count(): Counts occurrences of a value.
+	my_list.count(20)
+
+7. Sorting and Reversing
+	sort(): Sorts the list in ascending order (modifies in place).
+	my_list.sort()
+	
+	sorted(): Returns a sorted list (does not modify original list).
+	sorted_list = sorted(my_list)
+
+	reverse(): Reverses the list in place.
+	my_list.reverse()
+
+8. Other Useful Methods
+	len(): Returns the number of elements.
+	len(my_list)
+
+	copy(): Returns a shallow copy.
+	new_list = my_list.copy()
+
+9. Iterating Through a List
+	for item in my_list:
+	    print(item)
+10. List Comprehension
+	Compact syntax for creating lists.
+	squared = [x**2 for x in range(5)]
+------------------------------------------------Tuple-----------
+1. Creating Tuples
+	Empty Tuple
+	my_tuple = ()
+	
+	With Elements
+	my_tuple = (1, 2, 3)
+	
+	Single Element (Comma Required)
+	single_element = (1,)  # Note the comma
+	
+	Mixed Data Types
+	my_tuple = (1, "hello", 3.14)
+	
+	Without Parentheses (Tuple Packing)
+	my_tuple = 1, 2, 3
+
+2. Accessing Elements
+	Indexing
+	my_tuple = (10, 20, 30, 40)
+	print(my_tuple[0])  # 10
+	print(my_tuple[-1]) # 40
+
+	Slicing
+	print(my_tuple[1:3])  # (20, 30)
+
+3. Tuple Operations
+	Concatenation
+	tuple1 = (1, 2)
+	tuple2 = (3, 4)
+	result = tuple1 + tuple2  # (1, 2, 3, 4)
+	
+	Repetition
+	result = tuple1 * 2  # (1, 2, 1, 2)
+	
+	Membership
+	print(2 in tuple1)  # True
+
+4. Immutability
+	Tuples are immutable, so you cannot modify, add, or remove elements directly.
+	my_tuple[0] = 5  # Raises TypeError
+
+5. Methods
+	Tuples have limited methods compared to lists:
+
+	count(): Returns the number of occurrences of a value.
+	my_tuple = (1, 2, 2, 3)
+	print(my_tuple.count(2))  # 2
+	index(): Returns the index of the first occurrence of a value.
+	print(my_tuple.index(3))  # 3
+
+6. Unpacking
+	Tuples support unpacking elements into variables.
+	my_tuple = (1, 2, 3)
+	a, b, c = my_tuple
+	print(a, b, c)  # 1 2 3
+	You can also use the * operator for flexible unpacking:
+	a, *b = (1, 2, 3, 4)
+	print(a, b)  # 1 [2, 3, 4]
+		
+7. Advantages of Tuples
+	Immutable: Useful for read-only data.
+	Faster: Tuples are faster than lists for iteration and operations.
+	Hashable: Can be used as keys in dictionaries if they contain only immutable elements.
+8. Converting Between Lists and Tuples
+	List to Tuple
+	my_list = [1, 2, 3]
+	my_tuple = tuple(my_list)
+	
+	Tuple to List
+	my_tuple = (1, 2, 3)
+	my_list = list(my_tuple)
+--------------------------------------------------SET-------------------------------
+1. Creating Sets
+	Empty Set
+	my_set = set()  # Note: {} creates an empty dictionary, not a set.
+
+	Set with Elements
+	my_set = {1, 2, 3}
+	
+	From an Iterable
+	my_set = set([1, 2, 2, 3])  # {1, 2, 3}
+
+2. Set Characteristics
+	Unordered: The elements are not stored in a specific order.
+	No Duplicates: Each element is unique.
+	Mutable: You can add or remove elements.
+
+3. Adding Elements
+	add(): Adds a single element.
+	my_set.add(4)
+	
+	update(): Adds multiple elements (from an iterable).
+	my_set.update([5, 6])
+
+4. Removing Elements
+	remove(): Removes a specific element (raises an error if not found).
+	my_set.remove(2)
+
+	discard(): Removes a specific element (does not raise an error if not found).
+	my_set.discard(10)
+
+	pop(): Removes and returns an arbitrary element.
+	my_set.pop()
+
+	clear(): Removes all elements.
+	my_set.clear()
+		
+5. Set Operations
+	Union (| or union()): Combines elements from two sets.
+	set1 = {1, 2, 3}
+	set2 = {3, 4, 5}
+	print(set1 | set2)  # {1, 2, 3, 4, 5}
+
+	Intersection (& or intersection()): Elements common to both sets.
+	print(set1 & set2)  # {3}
+
+	Difference (- or difference()): Elements in one set but not in the other.
+	print(set1 - set2)  # {1, 2}
+
+	Symmetric Difference (^ or symmetric_difference()): Elements in either set, but not both.
+	print(set1 ^ set2)  # {1, 2, 4, 5}
+
+6. Subset and Superset
+	Subset (issubset()): Checks if one set is a subset of another.
+	set1 = {1, 2}
+	set2 = {1, 2, 3}
+	print(set1.issubset(set2))  # True
+
+	Superset (issuperset()): Checks if one set is a superset of another.
+	print(set2.issuperset(set1))  # True
+		
+7. Disjoint Sets
+	isdisjoint(): Checks if two sets have no elements in common.
+	set1 = {1, 2}
+	set2 = {3, 4}
+	print(set1.isdisjoint(set2))  # True
+
+8. Iterating Through a Set
+	my_set = {1, 2, 3}
+	for item in my_set:
+	    print(item)
+		
+9. Frozen Set
+	A frozen set is an immutable version of a set.
+	frozen = frozenset([1, 2, 3])
+	# frozen.add(4)  # Raises AttributeError
+
+10. Applications of Sets
+	Removing Duplicates from a List
+	my_list = [1, 2, 2, 3]
+	unique = list(set(my_list))  # [1, 2, 3]
+	
+	Membership Testing
+	print(2 in my_set)  # True
+----------------------------------------------------------Dictionary---------------------------------
+1. Creating Dictionaries
+	Empty Dictionary
+	my_dict = {}
+
+	Dictionary with Key-Value Pairs
+	my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+
+	Using the dict() Constructor
+	my_dict = dict(name="Alice", age=25, city="New York")
+
+	From a List of Tuples
+	my_dict = dict([("name", "Alice"), ("age", 25)])
+
+2. Accessing Values
+	Using Keys
+	print(my_dict["name"])  # Alice
+
+	Using get() (to avoid KeyError if the key doesn't exist)
+	print(my_dict.get("age"))  # 25
+	print(my_dict.get("height", "Not found"))  # Not found
+
+3. Adding and Updating Key-Value Pairs
+	# Add a new key-value pair
+	my_dict["height"] = 170
+	
+	# Update an existing key
+	my_dict["age"] = 26
+
+4. Removing Key-Value Pairs
+	pop(): Removes a key and returns its value.
+	age = my_dict.pop("age")  # Removes "age"
+
+	popitem(): Removes and returns the last inserted key-value pair (arbitrary before Python 3.7).
+	last_item = my_dict.popitem()
+
+	del: Deletes a key-value pair.
+	del my_dict["city"]
+		
+	clear(): Removes all elements.
+	my_dict.clear()
+		
+5. Checking Membership
+	Keys Only
+	print("name" in my_dict)  # True
+	print("salary" not in my_dict)  # True
+		
+6. Iterating Through a Dictionary
+	Keys:
+	for key in my_dict:
+	    print(key)
+		
+	Values:
+	for value in my_dict.values():
+	    print(value)
+	
+	Key-Value Pairs
+	for key, value in my_dict.items():
+	    print(key, value)
+		
+7. Dictionary Methods
+	keys(): Returns a view of all keys.
+	print(my_dict.keys())  # dict_keys(['name', 'age', 'city'])
+
+	values(): Returns a view of all values.
+	print(my_dict.values())  # dict_values(['Alice', 25, 'New York'])
+
+	items(): Returns a view of all key-value pairs.
+	print(my_dict.items())  # dict_items([('name', 'Alice'), ('age', 25), ('city', 'New York')])
+		
+	update(): Updates the dictionary with key-value pairs from another dictionary or iterable.
+	my_dict.update({"age": 30, "city": "San Francisco"})
+
+8. Dictionary Comprehension
+	squares = {x: x**2 for x in range(5)}
+	# {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+9. Default Values with defaultdict
+	From the collections module, it assigns a default value to keys that don't exist.
+	from collections import defaultdict
+	my_dict = defaultdict(int)
+	my_dict["count"] += 1  # {'count': 1}
+
+10. Nested Dictionaries
+	Dictionaries can store other dictionaries as values.
+	
+	nested_dict = {
+	    "person1": {"name": "Alice", "age": 25},
+	    "person2": {"name": "Bob", "age": 30}
+	}
+
+11. Copying a Dictionary
+	Shallow Copy
+	copy_dict = my_dict.copy()
+
+	Deep Copy
+	import copy
+	deep_copy = copy.deepcopy(my_dict)
+
+12. Use Cases
+	Count Frequency of Elements
+	from collections import Counter
+	counter = Counter("abracadabra")
+	# Counter({'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1})
+
+	Switch Keys and Values
+	swapped = {v: k for k, v in my_dict.items()}
+----------------------------------------------------------------------------------------------------------------	
+	---------------------------------------------------------------------------------------------------------------------------------------------------------
 # Object Oriented Programming
 # Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming. 
 # The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function
