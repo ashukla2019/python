@@ -161,8 +161,8 @@ print(type(val)) => o/p: <class 'str'>
 Strings:
 hello= 'hello'
 print(type(hello)) => <class 'str'>
-
-Creating Strings
+----------CRUD-----------------------
+-----------Create-----------------
 	# Single quotes
 	string1 = 'Hello, world!'
 	
@@ -172,17 +172,7 @@ Creating Strings
 	# Triple quotes for multiline strings
 	string3 = """This is a
 	multiline string."""
-
-Basic String Operations
-	# Concatenation
-	combined = string1 + " " + string2
-	
-	# Repetition
-	repeated = string1 * 3
-	
-	# Length
-	length = len(string1)
-	
+	-----------------Read-------------------
 	# Accessing characters
 	first_char = string1[0]
 	last_char = string1[-1]
@@ -190,7 +180,7 @@ Basic String Operations
 	# Slicing
 	substring = string1[0:5]
 	String Methods
-	
+	-----------------Update-----------
 	# Changing case
 	upper_case = string1.upper()
 	lower_case = string1.lower()
@@ -230,6 +220,7 @@ Basic String Operations
 	
 	# Escape quotes
 	quote = "She said, \"Python is awesome!\""
+---------------Delete-----------------
 
 Strings are immutable in Python, so methods that modify a string return a new string.
 Use r"raw strings" to avoid escaping backslashes in paths or regex patterns.
