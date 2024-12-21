@@ -13,7 +13,7 @@ Python was mainly developed for emphasis on code readability, and its syntax all
 This would be a multiline comment in Python that...
 """
 #-----------------------------------------------------------------------------------------------------------------------------------------------
-                              #Printing output to console
+#Printing output to console
 # print(hello) => NameError: name 'hello' is not defined
 # One object is passed 
 print("GeeksForGeeks") 
@@ -29,7 +29,7 @@ print("x =", x)
 #print("Python", end = '@')   
 #print("GeeksforGeeks")  Python@GeeksforGeeks
 #-----------------------------------------------------------------------------------------------------------------------------------------------
-                                  #Variables:
+#Variables:
 #We do not need to declare variables before using them or declare their type. A variable is created the moment we first assign a value to it.
 -> No special character is allowed
 -> starting with number not allowed
@@ -51,18 +51,15 @@ False
 print(age) 
 print(salary) 
 print(name) 
-print(name1)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------
-						#Taking input from user
+----------------------------------
+#Taking input from user
 #input(): Whatever value is entered, it is taken as string so it should be converted to specific data types.
    
 val = input("Enter your value: ")
 Enter your value: 10
-print(type(val)) => o/p: <class 'str'>
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------
-                                 # Operators:
+print(type(val)) => o/p: <class 
+-------------------------------
+# Operators:
 #Arithmetic operators: Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication and division.
 	# Examples of Arithmetic Operator 
 	a = 9
@@ -156,12 +153,11 @@ print(type(val)) => o/p: <class 'str'>
 	# Membership operator
 	print("G" in a1)
 	print("N" not in b1)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------
+----------CRUD---------------
 Strings:
 hello= 'hello'
-print(type(hello)) => <class 'str'>
-----------CRUD-----------------------
+print(type(hello)) => 
 -----------Create-----------------
 	# Single quotes
 	string1 = 'Hello, world!'
@@ -220,7 +216,7 @@ print(type(hello)) => <class 'str'>
 	
 	# Escape quotes
 	quote = "She said, \"Python is awesome!\""
----------------Delete-----------------
+---------------Delete------------------------------------------------------------------
 
 Strings are immutable in Python, so methods that modify a string return a new string.
 Use r"raw strings" to avoid escaping backslashes in paths or regex patterns.
