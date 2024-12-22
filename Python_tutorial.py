@@ -156,104 +156,12 @@ print(type(val)) => o/p: <class
 	print("N" not in b1)
 -----------------------------------
 ----------CRUD---------------
------------Create-----------------
-	# Single quotes
-	string1 = 'Hello, world!'
-	
-	# Double quotes
-	string2 = "Python is fun!"
-	
-	# Triple quotes for multiline strings
-	string3 = """This is a
-	multiline string."""
-	-----------------Read-------------------
-	# Accessing characters
-	first_char = string1[0]
-	last_char = string1[-1]
-	
-	# Slicing
-	substring = string1[0:5]
-	String Methods
-	-----------------Update-----------
-	# Changing case
-	upper_case = string1.upper()
-	lower_case = string1.lower()
-	
-	# Splitting and joining
-	words = string2.split()  # Splits into a list of words
-	joined = " ".join(words)  # Joins list into a string
-	
-	# Stripping whitespace
-	trimmed = "  Hello  ".strip()
-	
-	# Replace
-	replaced = string1.replace("world", "Python")
-	
-	# Finding substrings
-	index = string1.find("world")  # Returns -1 if not found
-	
-	# Checking content
-	is_alpha = "abc".isalpha()
-	is_digit = "123".isdigit()
-	String Formatting
-	
-	# f-strings (Python 3.6+)
-	name = "Alice"
-	formatted = f"Hello, {name}!"
-	
-	# format() method
-	formatted = "Hello, {}!".format(name)
-	
-	# Old-style formatting
-	formatted = "Hello, %s!" % name
-	Escape Characters
-	
-	# Newline and tab
-	new_line = "Hello\nWorld"
-	tabbed = "Hello\tWorld"
-	
-	# Escape quotes
-	quote = "She said, \"Python is awesome!\""
----------------Delete---------------------
-1. Delete a Character by Index
-You can create a new string without the character at a specific index using slicing.
 
-s = "hello"
-index_to_delete = 1
-new_s = s[:index_to_delete] + s[index_to_delete + 1:]
-print(new_s)  # Output: hllo
+	
+	
 
-2. Remove a Specific Character
-Use the replace() method to remove all occurrences of a specific character.
 
-s = "hello"
-new_s = s.replace("l", "")
-print(new_s)  # Output: heo
-
-3. Remove Characters by Condition
-Use list comprehensions or the filter() function to remove characters conditionally.
-
-s = "hello123"
-new_s = ''.join([char for char in s if not char.isdigit()])
-print(new_s)  # Output: hello
-
-4. Delete a Substring
-You can use replace() to remove a specific substring.
-
-s = "hello world"
-new_s = s.replace("world", "")
-print(new_s.strip())  # Output: hello
-
-5. Delete the Entire String
-If you want to delete a string completely, you can set the variable to None or an empty string.
-
-s = "hello"
-s = None  # or s = ""
-print(s)  # Output: None or ""
--------------------------------------------
-
-Strings are immutable in Python, so methods that modify a string return a new string.
-Use r"raw strings" to avoid escaping backslashes in -------------------------------
+ -------------------------------
 # Decision Making
 # Decision Making in programming is similar to decision making in real life. A programming language uses control statements to control the flow of execution of the program based on certain conditions. These are used to cause the flow of execution to advance and branch based on changes to the state of a program.
 
@@ -555,8 +463,110 @@ The most common way to call a function.
 	func_name = "sqrt"
 	result = getattr(math, func_name)(16)  # Call math.sqrt(16)
 	print(result)  # Output: 4.0
-#------------------------------------------------Data Types:-----------------------------------------------------------------------------------------------
----------------------------LIST-----------------------------------------------------
+#------------------------------------------------DataTypes:-----------------------------------------------------------------------------------------------
+--------------String--------------------
+‐---------------☆☆CRUD-‐--------------------------------------
+-----------Create-----------------
+	# Single quotes
+	string1 = 'Hello, world!'
+	
+	# Double quotes
+	string2 = "Python is fun!"
+	
+	# Triple quotes for multiline strings
+	string3 = """This is a
+	multiline string."""
+	-----------------Read-------------------
+	# Accessing characters
+	first_char = string1[0]
+	last_char = string1[-1]
+	
+	# Slicing
+	substring = string1[0:5]
+	String Methods
+	-----------------Update-----------
+	# Changing case
+	upper_case = string1.upper()
+	lower_case = string1.lower()
+	
+	# Splitting and joining
+	words = string2.split()  # Splits into a list of words
+	joined = " ".join(words)  # Joins list into a string
+
+	# Stripping whitespace
+	trimmed = "  Hello  ".strip()
+	
+	# Replace
+	replaced = string1.replace("world", "Python")
+	
+	# Finding substrings
+	index = string1.find("world")  # Returns -1 if not found
+	
+	# Checking content
+	is_alpha = "abc".isalpha()
+	is_digit = "123".isdigit()
+	String Formatting
+	
+	# f-strings (Python 3.6+)
+	name = "Alice"
+	formatted = f"Hello, {name}!"
+	
+	# format() method
+
+formatted = "Hello, {}!".format(name)
+	
+	# Old-style formatting
+	formatted = "Hello, %s!" % name
+	Escape Characters
+	
+	# Newline and tab
+	new_line = "Hello\nWorld"
+	tabbed = "Hello\tWorld"
+	
+	# Escape quotes
+	quote = "She said, \"Python is awesome!\""
+---------------Delete---------------------
+1. Delete a Character by Index
+You can create a new string without the character at a specific index using slicing.
+
+s = "hello"
+index_to_delete = 1
+new_s = s[:index_to_delete] + s[index_to_delete + 1:]
+print(new_s)  # Output: hllo
+
+2. Remove a Specific Character
+Use the replace() method to remove all occurrences of a specific character.
+
+s = "hello"
+new_s = s.replace("l", "")
+print(new_s)  # Output: heo
+
+3. Remove Characters by Condition
+Use list comprehensions or the filter() function to remove characters conditionally.
+
+s = "hello123"
+new_s = ''.join([char for char in s if not char.isdigit()])
+print(new_s)  # Output: hello
+
+4. Delete a Substring
+You can use replace() to remove a specific substring.
+
+s = "hello world"
+new_s = s.replace("world", "")
+print(new_s.strip())  # Output: hello
+
+5. Delete the Entire String
+If you want to delete a string completely, you can set the variable to None or an empty string.
+
+s = "hello"
+s = None  # or s = ""
+print(s)  # Output: None or ""
+
+Strings are immutable in Python, so methods that modify a string return a new string.
+Use r"raw strings" to avoid escaping backslashes in
+-------------------------------------------
+
+--------LIST-----------------------------------------------------
 1. Creation
 	# Empty list
 	my_list = []
