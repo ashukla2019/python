@@ -566,7 +566,7 @@ Strings are immutable in Python, so methods that modify a string return a new st
 Use r"raw strings" to avoid escaping backslashes in
 -------------------------------------------
 
---------LIST-----------------------------------------------------
+--------LIST--------------------------------------------Create------------
 1. Creation
 	# Empty list
 	my_list = []
@@ -577,45 +577,56 @@ Use r"raw strings" to avoid escaping backslashes in
 	# Mixed data types
 	my_list = [1, "hello", 3.14]
 
+-----------Read----------------
 2. Accessing Elements
-	Indexing: Access elements by their position.
+#Indexing: Access elements by their position.
 	my_list = [10, 20, 30, 40]
 	print(my_list[0])  # 10 (first element)
 	print(my_list[-1]) # 40 (last element)
 
-	Slicing: Extract portions of the list.
+#Slicing: Extract portions of the list.
 	print(my_list[1:3])  # [20, 30]
 	print(my_list[:2])   # [10, 20]
 
+#Iterating Through a List
+	for item in my_list:
+	    print(item)
+
+----------Update----------------
 3. Adding Elements
-	append(): Adds an element to the end.
+#append(): Adds an element to the end.
 	my_list.append(50)
 	
-	extend(): Adds elements from another list.
+#extend(): Adds elements from another list.
 	my_list.extend([60, 70])
 
-	insert(): Inserts an element at a specific index.
+#insert(): Inserts an element at a specific index.
 	my_list.insert(2, 25)  # Inserts 25 at index 2
 		
-	Modifying Elements
+#Modifying Elements
 	my_list[0] = 15  # Change first element to 15
-		
+	
+-----------Delete--------------	
 4. Removing Elements
-	remove(): Removes the first occurrence of a value.
+#remove(): Removes the first occurrence of a value.
 	my_list.remove(20)
-	pop(): Removes and returns an element by index.
+
+#pop(): Removes and returns an element by index.
 	my_list.pop()    # Removes last element
 	my_list.pop(1)   # Removes element at index 1
-	clear(): Removes all elements.
+
+#clear(): Removes all elements.
 	my_list.clear()
-6. Searching
+
+--------------Other operations-----
+5. Searching
 	index(): Returns the index of the first occurrence of a value.
 	my_list.index(30)
 		
 	count(): Counts occurrences of a value.
 	my_list.count(20)
 
-7. Sorting and Reversing
+6. Sorting and Reversing
 	sort(): Sorts the list in ascending order (modifies in place).
 	my_list.sort()
 	
@@ -625,17 +636,14 @@ Use r"raw strings" to avoid escaping backslashes in
 	reverse(): Reverses the list in place.
 	my_list.reverse()
 
-8. Other Useful Methods
+7. Other Useful Methods
 	len(): Returns the number of elements.
 	len(my_list)
 
 	copy(): Returns a shallow copy.
 	new_list = my_list.copy()
 
-9. Iterating Through a List
-	for item in my_list:
-	    print(item)
-10. List Comprehension
+8. List Comprehension
 	Compact syntax for creating lists.
 	squared = [x**2 for x in range(5)]
 ------------------------------------------------Tuple-----------
