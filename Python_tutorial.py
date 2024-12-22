@@ -28,7 +28,7 @@ print("x =", x)
 # using end argument 
 #print("Python", end = '@')   
 #print("GeeksforGeeks")  Python@GeeksforGeeks
-#-----------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------
 #Variables:
 #We do not need to declare variables before using them or declare their type. A variable is created the moment we first assign a value to it.
 -> No special character is allowed
@@ -73,7 +73,7 @@ print(type(val)) => o/p: <class
 	# print results 
 	print(add) 
 	print(sub) 
-
+-----------------------
 #Relational Operators: Relational operators compares the values. It either returns True or False according to the condition:
 	# Examples of Relational Operators 
 	a = 13
@@ -96,7 +96,7 @@ print(type(val)) => o/p: <class
 	   
 	# a <= b is True 
 	print(a <= b)
-
+----------------------------
 #Logical Operators: Logical operators perform Logical AND, Logical OR and Logical NOT operations.
 	# Examples of Logical Operator 
 	a = True
@@ -110,7 +110,7 @@ print(type(val)) => o/p: <class
 	   
 	# Print not a is False 
 	print(not a) 
-
+-------------------------
 #Bitwise operators: Bitwise operator acts on bits and performs bit by bit operation.
 	# Examples of Bitwise operators 
 	a = 10
@@ -133,10 +133,11 @@ print(type(val)) => o/p: <class
 	   
 	# print bitwise left shift operation  
 	print(a << 2)
-
+-----------------------------
 #Assignment operators: Assignment operators are used to assign values to the variables.
+----------------------------
 	#Special operators: Special operators are of two types-
-	
+
 	#Identity operator that contains is and is not.
 	#Membership operator that contains in and not in.
 	
@@ -155,9 +156,6 @@ print(type(val)) => o/p: <class
 	print("N" not in b1)
 -----------------------------------
 ----------CRUD---------------
-Strings:
-hello= 'hello'
-print(type(hello)) => 
 -----------Create-----------------
 	# Single quotes
 	string1 = 'Hello, world!'
@@ -216,11 +214,46 @@ print(type(hello)) =>
 	
 	# Escape quotes
 	quote = "She said, \"Python is awesome!\""
----------------Delete------------------------------------------------------------------
+---------------Delete---------------------
+1. Delete a Character by Index
+You can create a new string without the character at a specific index using slicing.
+
+s = "hello"
+index_to_delete = 1
+new_s = s[:index_to_delete] + s[index_to_delete + 1:]
+print(new_s)  # Output: hllo
+
+2. Remove a Specific Character
+Use the replace() method to remove all occurrences of a specific character.
+
+s = "hello"
+new_s = s.replace("l", "")
+print(new_s)  # Output: heo
+
+3. Remove Characters by Condition
+Use list comprehensions or the filter() function to remove characters conditionally.
+
+s = "hello123"
+new_s = ''.join([char for char in s if not char.isdigit()])
+print(new_s)  # Output: hello
+
+4. Delete a Substring
+You can use replace() to remove a specific substring.
+
+s = "hello world"
+new_s = s.replace("world", "")
+print(new_s.strip())  # Output: hello
+
+5. Delete the Entire String
+If you want to delete a string completely, you can set the variable to None or an empty string.
+
+s = "hello"
+s = None  # or s = ""
+print(s)  # Output: None or ""
+-------------------------------------------
 
 Strings are immutable in Python, so methods that modify a string return a new string.
-Use r"raw strings" to avoid escaping backslashes in paths or regex patterns.
-#-----------------------------------------------------------------------------------------------------------------------------------------------
+Use r"raw strings" to avoid escaping backslashes in -------------------------------
 # Decision Making
 # Decision Making in programming is similar to decision making in real life. A programming language uses control statements to control the flow of execution of the program based on certain conditions. These are used to cause the flow of execution to advance and branch based on changes to the state of a program.
 
