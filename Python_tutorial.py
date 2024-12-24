@@ -154,16 +154,9 @@ print(type(val)) => o/p: <class
 	# Membership operator
 	print("G" in a1)
 	print("N" not in b1)
------------------------------------
-----------CRUD---------------
-
-	
-	
-
 
  -------------------------------
 # Decision Making
-# Decision Making in programming is similar to decision making in real life. A programming language uses control statements to control the flow of execution of the program based on certain conditions. These are used to cause the flow of execution to advance and branch based on changes to the state of a program.
 
 # Decision-making statements in Python
 #    if statement
@@ -719,6 +712,11 @@ Use r"raw strings" to avoid escaping backslashes in
 	my_tuple = (1, 2, 3)
 	my_list = list(my_tuple)
 --------------------------------------------------SET-------------------------------
+Set Characteristics
+	Unordered: The elements are not stored in a specific order.
+	No Duplicates: Each element is unique.
+	Mutable: You can add or remove elements.
+-------------Create--------------------
 1. Creating Sets
 	Empty Set
 	my_set = set()  # Note: {} creates an empty dictionary, not a set.
@@ -728,12 +726,18 @@ Use r"raw strings" to avoid escaping backslashes in
 	
 	From an Iterable
 	my_set = set([1, 2, 2, 3])  # {1, 2, 3}
+-------------Read-------------------------
+Accessing element using
+# for loop
+print("\nElements of set: ")
+for i in set1:
+    print(i, end=" ")
 
-2. Set Characteristics
-	Unordered: The elements are not stored in a specific order.
-	No Duplicates: Each element is unique.
-	Mutable: You can add or remove elements.
-
+# Checking the element
+# using in keyword
+print("\n")
+print("Geeks" in set1)
+----------Update-------------------
 3. Adding Elements
 	add(): Adds a single element.
 	my_set.add(4)
@@ -741,6 +745,7 @@ Use r"raw strings" to avoid escaping backslashes in
 	update(): Adds multiple elements (from an iterable).
 	my_set.update([5, 6])
 
+------------Delete-------------------
 4. Removing Elements
 	remove(): Removes a specific element (raises an error if not found).
 	my_set.remove(2)
@@ -753,7 +758,7 @@ Use r"raw strings" to avoid escaping backslashes in
 
 	clear(): Removes all elements.
 	my_set.clear()
-		
+---------------------------------		
 5. Set Operations
 	Union (| or union()): Combines elements from two sets.
 	set1 = {1, 2, 3}
@@ -783,16 +788,7 @@ Use r"raw strings" to avoid escaping backslashes in
 	set1 = {1, 2}
 	set2 = {3, 4}
 	print(set1.isdisjoint(set2))  # True
-
-8. Iterating Through a Set
-	my_set = {1, 2, 3}
-	for item in my_set:
-	    print(item)
-		
-9. Frozen Set
-	A frozen set is an immutable version of a set.
-	frozen = frozenset([1, 2, 3])
-	# frozen.add(4)  # Raises AttributeError
+------------------------------
 
 10. Applications of Sets
 	Removing Duplicates from a List
@@ -801,67 +797,35 @@ Use r"raw strings" to avoid escaping backslashes in
 	
 	Membership Testing
 	print(2 in my_set)  # True
-----------------------------------------------------------Dictionary---------------------------------
+----------------------------------------------------------Dictionary-------------------------------Create---------
 1. Creating Dictionaries
-	Empty Dictionary
+#Empty Dictionary
 	my_dict = {}
 
-	Dictionary with Key-Value Pairs
+#Dictionary with Key-Value Pairs
 	my_dict = {"name": "Alice", "age": 25, "city": "New York"}
 
-	Using the dict() Constructor
+#Using the dict() Constructor
 	my_dict = dict(name="Alice", age=25, city="New York")
 
-	From a List of Tuples
+#From a List of Tuples
 	my_dict = dict([("name", "Alice"), ("age", 25)])
 
+----------Read---------------
 2. Accessing Values
-	Using Keys
+#Using Keys
 	print(my_dict["name"])  # Alice
 
-	Using get() (to avoid KeyError if the key doesn't exist)
+#Using get() (to avoid KeyError if the key doesn't exist)
 	print(my_dict.get("age"))  # 25
 	print(my_dict.get("height", "Not found"))  # Not found
 
-3. Adding and Updating Key-Value Pairs
-	# Add a new key-value pair
-	my_dict["height"] = 170
-	
-	# Update an existing key
-	my_dict["age"] = 26
-
-4. Removing Key-Value Pairs
-	pop(): Removes a key and returns its value.
-	age = my_dict.pop("age")  # Removes "age"
-
-	popitem(): Removes and returns the last inserted key-value pair (arbitrary before Python 3.7).
-	last_item = my_dict.popitem()
-
-	del: Deletes a key-value pair.
-	del my_dict["city"]
-		
-	clear(): Removes all elements.
-	my_dict.clear()
-		
-5. Checking Membership
+#Checking Membership
 	Keys Only
 	print("name" in my_dict)  # True
 	print("salary" not in my_dict)  # True
-		
-6. Iterating Through a Dictionary
-	Keys:
-	for key in my_dict:
-	    print(key)
-		
-	Values:
-	for value in my_dict.values():
-	    print(value)
-	
-	Key-Value Pairs
-	for key, value in my_dict.items():
-	    print(key, value)
-		
-7. Dictionary Methods
+
+#Dictionary Methods
 	keys(): Returns a view of all keys.
 	print(my_dict.keys())  # dict_keys(['name', 'age', 'city'])
 
@@ -871,20 +835,42 @@ Use r"raw strings" to avoid escaping backslashes in
 	items(): Returns a view of all key-value pairs.
 	print(my_dict.items())  # dict_items([('name', 'Alice'), ('age', 25), ('city', 'New York')])
 		
-	update(): Updates the dictionary with key-value pairs from another dictionary or iterable.
+---------Update--------------------
+3. Adding and Updating Key-Value Pairs
+	# Add a new key-value pair
+	my_dict["height"] = 170
+	
+	# Update an existing key
+	my_dict["age"] = 26
+		
+ #update(): Updates the dictionary with   key-value pairs from another dictionary or iterable.
 	my_dict.update({"age": 30, "city": "San Francisco"})
 
-8. Dictionary Comprehension
+-------Delete---------------------
+4. Removing Key-Value Pairs
+#pop(): Removes a key and returns its value.
+	age = my_dict.pop("age")  # Removes "age"
+
+#popitem(): Removes and returns the last inserted key-value pair (arbitrary before Python 3.7).
+	last_item = my_dict.popitem()
+
+#del: Deletes a key-value pair.
+	del my_dict["city"]
+		
+#clear(): Removes all elements.
+	my_dict.clear()
+--------------------------------
+5. Dictionary Comprehension
 	squares = {x: x**2 for x in range(5)}
 	# {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 
-9. Default Values with defaultdict
+6. Default Values with defaultdict
 	From the collections module, it assigns a default value to keys that don't exist.
 	from collections import defaultdict
 	my_dict = defaultdict(int)
 	my_dict["count"] += 1  # {'count': 1}
 
-10. Nested Dictionaries
+7. Nested Dictionaries
 	Dictionaries can store other dictionaries as values.
 	
 	nested_dict = {
@@ -892,7 +878,7 @@ Use r"raw strings" to avoid escaping backslashes in
 	    "person2": {"name": "Bob", "age": 30}
 	}
 
-11. Copying a Dictionary
+8. Copying a Dictionary
 	Shallow Copy
 	copy_dict = my_dict.copy()
 
@@ -900,16 +886,14 @@ Use r"raw strings" to avoid escaping backslashes in
 	import copy
 	deep_copy = copy.deepcopy(my_dict)
 
-12. Use Cases
+9. Use Cases
 	Count Frequency of Elements
 	from collections import Counter
 	counter = Counter("abracadabra")
 	# Counter({'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1})
 
 	Switch Keys and Values
-	swapped = {v: k for k, v in my_dict.items()}
-----------------------------------------------------------------------------------------------------------------	
-	---------------------------------------------------------------------------------------------------------------------------------------------------------
+	swapped = {v: k for k, v in -------------------------------------------------------------------------------------------------------------
 # Object Oriented Programming
 # Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming. 
 # The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function
