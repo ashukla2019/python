@@ -640,6 +640,7 @@ Use r"raw strings" to avoid escaping backslashes in
 	Compact syntax for creating lists.
 	squared = [x**2 for x in range(5)]
 ------------------------------------------------Tuple-----------
+--------------Create--------
 1. Creating Tuples
 	Empty Tuple
 	my_tuple = ()
@@ -656,6 +657,7 @@ Use r"raw strings" to avoid escaping backslashes in
 	Without Parentheses (Tuple Packing)
 	my_tuple = 1, 2, 3
 
+----------Read-------------
 2. Accessing Elements
 	Indexing
 	my_tuple = (10, 20, 30, 40)
