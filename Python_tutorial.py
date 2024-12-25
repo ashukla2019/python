@@ -1,4 +1,4 @@
-"""
+3"""
 Python is a high-level programming language and is widely being used among the developers community.
 Python was mainly developed for emphasis on code readability, and its syntax allows programmers to express concepts in fewer lines of code.
 """
@@ -429,13 +429,15 @@ The most common way to call a function.
 	greeter = Greeter()
 	greeter.greet()  # Output: Hello from a class!
 
-9. Using eval() or exec(): Avoid these for security reasons unless absolutely necessary.
+9. Calling Anonymous Functions (lambda): Lambdas are small, inline functions.
+	add = lambda x, y: x + y
+	print(add(3, 5))  # Output: 8
+
+
+10. Using eval() or exec(): Avoid these for security reasons unless absolutely necessary.
 	code = "print('Hello from eval')"
 	eval(code)  # Output: Hello from eval
 
-10. Calling Anonymous Functions (lambda): Lambdas are small, inline functions.
-	add = lambda x, y: x + y
-	print(add(3, 5))  # Output: 8
 
 11. Using functools.partial: Partial functions pre-fill some arguments.
 	from functools import partial
