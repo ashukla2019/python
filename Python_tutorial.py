@@ -741,6 +741,10 @@ for i in set1:
 # using in keyword
 print("\n")
 print("Geeks" in set1)
+
+# using list() method
+s = set([1, 2, 3])
+list(s)[0]
 ----------Update-------------------
 3. Adding Elements
 	add(): Adds a single element.
