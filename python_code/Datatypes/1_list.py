@@ -160,3 +160,60 @@ print(my_list)              # Output: [10, 50]
 my_list.clear()             # Empties the list
 print(my_list)              # Output: []
 
+------------------------------------------------------------------------------------------
+class mylist():
+    def __init__(self):
+        #Empty list
+        self.mylist = []
+
+    def create_list(self):
+        # list with different types of data
+        self.mylist = [1, 2, "hello"]
+
+    def read_list(self):
+        # Access single character
+        print(self.mylist[0])
+
+        # Access characters in range: slicing
+        print(self.mylist[:len(self.mylist) - 2])
+
+        # Iterate list using for loop:
+        for item in self.mylist:
+            print(item)
+
+    def update_list(self):
+        #Add single elements: append()
+        self.mylist.append(4)
+
+        # Add multiple elements: extend()
+        self.mylist.extend([5, "bye"])
+
+        #insert element at particular index:
+        self.mylist.insert(2, "hi")
+
+
+    def delete_list(self):
+        #Remove element by value:
+        self.mylist.remove("bye")
+
+        #Remove the last element using pop()
+        self.mylist.pop()
+
+        # Remove by index using del
+        del self.mylist[2]
+
+        # Clear the entire list
+        self.mylist.clear()
+
+    def __del__(self):
+        if self.mylist:
+            del self.mylist
+
+if __name__ == '__main__':
+    lt = mylist()
+    lt.create_list()
+    lt.read_list()
+    lt.update_list()
+    lt.read_list()
+    lt.delete_list()
+    
