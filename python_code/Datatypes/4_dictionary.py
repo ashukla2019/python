@@ -95,3 +95,78 @@ Output:
 {'A': {1: 'Geeks', 2: 'For', 3: 'Geeks'}, 6: 'To', 7: 'Geeks'}
 {6: 'To', 7: 'Geeks'}
 '''
+---------------------------------------------------------------------------------------------- 
+class mydict():
+    def __init__(self):
+        #Empty dictionary
+        self.mydict = dict()
+        self.mydict = {}
+
+    def create_dict(self):
+        # Dictionary with Key-Value Pairs
+        self.mydict = {"name": "Alice", "age": 25, "city": "New York"}
+
+        # Using the dict() Constructor
+        self.mydict = dict(name="Alice", age=25, city="New York")
+
+        # From a List of Tuples
+        self.mydict = dict([("name", "Alice"), ("age", 25)])
+
+    def read_dict(self):
+        # Using Keys
+        print(self.mydict["name"])  # Alice
+
+        # Using get() (to avoid KeyError if the key doesn't exist)
+        print(self.mydict.get("age"))  # 25
+        print(self.mydict.get("height", "Not found"))  # Not found
+
+        # Checking Membership
+        # Keys Only
+        print("name" in self.mydict)  # True
+        print("salary" not in self.mydict)  # True
+
+        # Dictionary Methods
+        # keys(): Returns a view of all keys.
+        print(self.mydict.keys())  # dict_keys(['name', 'age', 'city'])
+
+        #values(): Returns a view of all values.
+        print(self.mydict.values())  # dict_values(['Alice', 25, 'New York'])
+
+        #items(): Returns a view of all key - value pairs.
+        print(self.mydict.items())  # dict_items([('name', 'Alice'), ('age', 25), ('city', 'New York')])
+
+    def update_dict(self):
+        # Adding and Updating Key - Value
+        # Add a new key-value pair
+        self.mydict["height"] = 170
+
+        # Update an existing key
+        self.mydict["age"] = 26
+
+        # update(): Updates the dictionary with   key-value pairs from another dictionary or iterable.
+        self.mydict.update({"age": 30, "city": "San Francisco"})
+
+    def delete_dict(self):
+        # pop(): Removes a key and returns its value.
+        age = self.mydict.pop("age")  # Removes "age"
+
+        # popitem(): Removes and returns the last inserted key-value pair (arbitrary before Python 3.7).
+        last_item = self.mydict.popitem()
+
+        # del: Deletes a key-value pair.
+        del self.mydict["city"]
+
+        # clear(): Removes all elements.
+        self.mydict.clear()
+
+    def __del__(self):
+        if self.mydict:
+            del self.mydict
+
+if __name__ == '__main__':
+    st = mydict()
+    st.create_dict()
+    st.read_dict()
+    st.update_dict()
+    st.read_dict()
+    st.delete_dict()
