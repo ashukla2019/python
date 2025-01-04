@@ -73,3 +73,57 @@ Find elements in either set but not both:
 sym_diff = set1.symmetric_difference(set2)  # {1, 2, 4, 5}
 These operations can support CRUD functionality in applications like filtering, querying, or comparing data sets.
 
+ ------------------------------------------------------------------------------------------------------------  
+ class myset():
+    def __init__(self):
+        #Empty set
+        self.myset = set()
+
+    def create_set(self):
+        # list with different types of data
+        self.myset = {1, 2, "hello"}
+
+    def read_set(self):
+        # Access single character by passing set to list(), can not directly access using
+        #subscript[]
+        print(list(self.myset)[0])
+
+        # Access characters in range: slicing but by passing to list()
+        print(list(self.myset)[:len(self.myset) - 2])
+
+        # Iterate list using for loop:
+        for item in self.myset:
+            print(item)
+
+    def update_set(self):
+        #Add single elements: add()
+        self.myset.add(4)
+
+        # Add multiple elements: extend()
+        self.myset.update({6, 7, 8})
+
+    def delete_set(self):
+        # Raises KeyError if the element doesn't exist
+        self.myset.remove(3)
+
+        # Safe, does nothing if the element doesn't exist
+        self.myset.discard(3)
+
+        # pop(): Removes and returns an arbitrary element.
+        self.myset.pop()
+
+        # clear(): Removes all elements.
+        self.myset.clear()
+
+    def __del__(self):
+        if self.myset:
+            del self.myset
+
+if __name__ == '__main__':
+    st = myset()
+    st.create_set()
+    st.read_set()
+    st.update_set()
+    st.read_set()
+    st.delete_set()
+   
