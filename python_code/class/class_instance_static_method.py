@@ -138,3 +138,43 @@ Class Method: Useful when dealing with class-level functionality and shared attr
 Static Method: Handy for standalone functions related to the class but not dependent on its state.
 Instance Method: Essential for modifying and accessing instance attributes and behaviors.
 
+-------------------------------------------------------------------------------------------------
+class Student:
+    # class variables
+    school_name = 'ABC School'
+
+    # constructor
+    def __init__(self, name, age):
+        # instance variables
+        self.name = name
+        self.age = age
+
+    # instance variables
+    def show(self):
+        print(self.name, self.age, Student.school_name)
+        self.__class__.change_School("ABCD......")
+
+    @classmethod
+    def change_School(cls, name):
+        cls.school_name = name
+
+    @staticmethod
+    def find_notes(subject_name):
+        return ['chapter 1', 'chapter 2', 'chapter 3']
+
+
+if __name__=='__main__':
+    # create object
+    obj = Student('Jessa', 12)
+    # call instance method
+    obj.show()
+
+    # call class method using the class
+    Student.change_School('XYZ School')
+    # call class method using the object
+    obj.change_School('PQR School')
+
+    # call static method using the class
+    Student.find_notes('Math')
+    # call class method using the object
+    obj.find_notes('Math')
