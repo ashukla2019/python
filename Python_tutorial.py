@@ -1,4 +1,7 @@
-3"""
+CPVIO
+
+
+
 Python is a high-level programming language and is widely being used among the developers community.
 Python was mainly developed for emphasis on code readability, and its syntax allows programmers to express concepts in fewer lines of code.
 """
@@ -51,6 +54,16 @@ False
 print(age) 
 print(salary) 
 print(name) 
+
+# Example of dynamic typing in Python
+my_variable = 10  # my_variable is an integer
+print(type(my_variable))
+
+my_variable = "Hello"  # my_variable is now a string
+print(type(my_variable))
+
+my_variable = [1, 2, 3]  # my_variable is now a list
+print(type(my_variable))
 ----------------------------------
 #Taking input from user
 #input(): Whatever value is entered, it is taken as string so it should be converted to specific data types.
@@ -58,6 +71,34 @@ print(name)
 val = input("Enter your value: ")
 Enter your value: 10
 print(type(val)) => o/p: <class 
+
+# Basic usage with a prompt
+user_name = input("Enter your name: ")
+print(f"Hello, {user_name}!")
+
+# Taking numerical input and converting it
+try:
+    user_age_str = input("Enter your age: ")
+    user_age_int = int(user_age_str)
+    print(f"You are {user_age_int} years old.")
+except ValueError:
+    print("Invalid age entered. Please enter a number.")
+
+# Taking multiple inputs on one line (as strings)
+colors_input = input("Enter your favorite colors (separated by spaces): ")
+favorite_colors = colors_input.split()
+print(f"Your favorite colors are: {favorite_colors}")
+
+# Taking multiple integer inputs on one line
+try:
+    numbers_input = input("Enter two numbers (separated by spaces): ")
+    num1_str, num2_str = numbers_input.split()
+    num1 = int(num1_str)
+    num2 = int(num2_str)
+    print(f"The sum of {num1} and {num2} is {num1 + num2}")
+except ValueError:
+    print("Invalid input. Please enter two numbers separated by spaces.")
+
 -------------------------------
 # Operators:
 #Arithmetic operators: Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication and division.
