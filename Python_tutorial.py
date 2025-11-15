@@ -1,12 +1,12 @@
-C
-P
-V
-I
-O
-c
-l
-F
-O
+C: Comments
+C: Constructor/Destructor
+L: Loops
+V: Varaibles
+I: If/Else
+P: print
+F: Functions
+O: Operators
+O: Oops
 D
 
 Python is a high-level programming language and is widely being used among the developers community.
