@@ -1,5 +1,7 @@
-1. LIST (Ordered, mutable, allows duplicates)
+1. LIST (Ordered, mutable, allows duplicates =>OMD)
 	Create
+	empty_list = []
+	empty_list = list()
 	lst = [1, 2, 3]
 	lst.append(4)
 	lst.insert(1, 10)   # insert at index
@@ -21,8 +23,10 @@
 	lst.clear()         # empty list
 	
 ---------------------------------------------------------------
-2. TUPLE (Ordered, immutable)
+2. TUPLE (Ordered, immutable =>O)
 	Create
+	empty_tuple = ()
+	empty_tuple = tuple()
 	tup = (1, 2, 3)
 
 	Read
@@ -41,8 +45,9 @@
 	You cannot delete an item, only the entire tuple:
 	del tup
 ----------------------------------------------------------------
-3. SET (Unordered, mutable, no duplicates)
+3. SET (Unordered, mutable, no duplicates =>OM)
 	Create
+	empty_set = set()
 	s = {1, 2, 3}
 	s.add(4)
 	s.update([5, 6])
@@ -66,6 +71,8 @@
 -----------------------------------------------------------------
 4. DICT (Dictionary) (Key-value pairs, mutable)
 	Create
+	empty_dict = {}
+	empty_dict = dict()
 	d = {"name": "Alice", "age": 25}
 	d["city"] = "Seoul"     # add
 
@@ -84,10 +91,10 @@
 	del d["city"]
 	removed = d.pop("age")
 	d.clear()
-
+--------------------------------------------------------------------------------------------------------------
 Summary Table
 Type	  Mutable	    Indexed	       CRUD Notes
 List	  Yes	        Yes	           Full CRUD support
 Tuple	  No	        Yes	           Only read; update = recreate
-Set	    Yes	        No	           Unordered, no direct index update
-Dict	  Yes	        Key-based	     CRUD using keys
+Set	      Yes	        No	           Unordered, no direct index update
+Dict	  Yes	        Key-based	   CRUD using keys
