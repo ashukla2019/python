@@ -45,7 +45,7 @@
 	You cannot delete an item, only the entire tuple:
 	del tup
 ----------------------------------------------------------------
-3. SET (Unordered, mutable, no duplicates =>OM)
+3. SET (Unordered, mutable, no duplicates =>UM)
 	Create
 	empty_set = set()
 	s = {1, 2, 3}
