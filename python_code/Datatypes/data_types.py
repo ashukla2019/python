@@ -3,19 +3,19 @@
 	empty_list = []
 	empty_list = list()
 	lst = [1, 2, 3]
-	lst.append(4)
-	lst.insert(1, 10)   # insert at index
-	lst.extend([5, 6])
-	
+-----------	
 	Read
 	x = lst[0]      # index
 	length = len(lst)
 	sliced = lst[1:3]
-
+-----------
 	Update
 	lst[0] = 100        # update value
 	lst[1:3] = [20, 30] # update slice
-
+ lst.append(4)
+	lst.insert(1, 10)   # insert at index
+	lst.extend([5, 6])
+-------------
 	Delete
 	del lst[0]
 	lst.remove(30)
@@ -49,20 +49,21 @@
 	Create
 	empty_set = set()
 	s = {1, 2, 3}
-	s.add(4)
-	s.update([5, 6])
-
+	------------
 	Read
 	No indexing! But you can loop or check membership:
 	for i in s: print(i)
 	exists = 3 in s
-
+---------------
 	Update
 	Technically sets don’t support direct "update by index".
 	But you can remove and add:
 	s.remove(2)
 	s.add(10)
+ s.add(4)
+	s.update([5, 6])
 
+--------------
 	Delete
 	s.remove(3)       # error if not found
 	s.discard(3)      # safe remove
