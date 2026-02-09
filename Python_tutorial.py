@@ -1,13 +1,15 @@
-C: Comments
-C: Class
-L: Loops
-V: Varaibles
-I: If/Else
+V: variable
+I: Input
 P: print
-F: Functions
+
 O: Operators
-O: Oops
-D: Datatypes
+I: IF-Else
+L: Loop
+
+F: Functions
+D: DataTypes
+
+OOPS:
 
 Python is a high-level programming language and is widely being used among the developers community.
 Python was mainly developed for emphasis on code readability, and its syntax allows programmers to express concepts in fewer lines of code.
@@ -15,6 +17,7 @@ Python was mainly developed for emphasis on code readability, and its syntax all
 #Python Indentation:
 #Python uses indentation to highlight the blocks of code. Whitespace is used for indentation in Python.
 
+----------------------------------
 #Python Comments:
 	#Single line comments: Python single line comment starts with hash tag symbol with no white spaces.
 	# This is a comment 
@@ -22,23 +25,7 @@ Python was mainly developed for emphasis on code readability, and its syntax all
 """ 
 This would be a multiline comment in Python that...
 """
-#-----------------------------------------------------------------------------------------------------------------------------------------------
-#Printing output to console
-# print(hello) => NameError: name 'hello' is not defined
-# One object is passed 
-print("GeeksForGeeks") 
-   
-x = 5
-# Two objects are passed 
-print("x =", x) 
-   
-# code for disabling the soft space feature  
-#print('G', 'F', 'G', sep ='') 
-   
-# using end argument 
-#print("Python", end = '@')   
-#print("GeeksforGeeks")  Python@GeeksforGeeks
-#-------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
 #Variables:
 #We do not need to declare variables before using them or declare their type. A variable is created the moment we first assign a value to it.
 -> No special character is allowed
@@ -71,7 +58,7 @@ print(type(my_variable))
 
 my_variable = [1, 2, 3]  # my_variable is now a list
 print(type(my_variable))
-----------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 #Taking input from user
 #input(): Whatever value is entered, it is taken as string so it should be converted to specific data types.
    
@@ -106,6 +93,23 @@ try:
 except ValueError:
     print("Invalid input. Please enter two numbers separated by spaces.")
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+#Printing output to console
+# print(hello) => NameError: name 'hello' is not defined
+# One object is passed 
+print("GeeksForGeeks") 
+   
+x = 5
+# Two objects are passed 
+print("x =", x) 
+   
+# code for disabling the soft space feature  
+#print('G', 'F', 'G', sep ='') 
+   
+# using end argument 
+#print("Python", end = '@')   
+#print("GeeksforGeeks")  Python@GeeksforGeeks
+#-------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------
 # Operators:
 #Arithmetic operators: Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication and division.
@@ -296,7 +300,6 @@ Hello Geek
 1
 11
 '''
----------------------------------------------------------------------------------------------------------------------------------------------	
 # For and for-else loop
 A for loop in Python is used to iterate over a sequence (such as a list, tuple, dictionary, set, or string) or any object that supports iteration. 
 Here's the basic syntax:
